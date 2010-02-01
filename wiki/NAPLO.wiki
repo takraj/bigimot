@@ -1,0 +1,20 @@
+#summary A projekt naplója.
+
+= Minek ez? =
+
+Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja ide, hogy mikor kezdett hozzá, mikor fejezte be, és mit csinált pontosan. Ezek szükségesek a dokumentációhoz.
+
+
+= A napló =
+
+*Idő:* 2010.02.01. 21:00 - 21:20
+*Részvevők:* Rajmund, Laci, Dávid, Gábor
+
+  * Ld. 0. konzultáció
+  * Csapat regisztrálása
+
+*Idő:* 2010.xx.xx. xx:xx - xx:xx
+*Részvevők:* Remélhetőleg mindenki...
+
+  * Első meeting...
+  * Csak azért írtam be, hogy lássátok hogy milyen formában kell vezetni a naplót...
