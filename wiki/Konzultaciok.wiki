@@ -1,0 +1,20 @@
+#summary A konzultációkon elhangzottak összefoglalása.
+
+= 0. Konzultáció (2010.02.01., hely: msn) =
+
+Jelenlévők: Dávid, Gábor, Laci, Rajmund
+
+  * Kijelöltük a csapatkapitányt: *Dávid*
+  * Cspatnevet választottunk: *Bigimot*
+  * Alapvető adminisztratív dolgok...
+
+= 1. Konzultáció (2010.xx.xx., hely: xxxxx) =
+
+Az előző mintájára írja be aki éppen szerkeszti...
+
+Kis segítség:
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
