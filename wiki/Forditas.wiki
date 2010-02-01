@@ -1,0 +1,5 @@
+#summary A mindenkori fordítási beállítások.
+
+= Java fordító beállításai =
+
+Add your content here.
