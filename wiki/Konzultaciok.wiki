@@ -1,20 +1,34 @@
 #summary A konzultációkon elhangzottak összefoglalása.
 
-= 0. Konzultáció (2010.02.01., hely: msn) =
+= -1. Konzultáció (2010.02.01., hely: msn) =
 
-Jelenlévők: Dávid, Gábor, Laci, Rajmund
+Jelenlévők: Boros, Rapp, Molnár, Takács
 
   * Kijelöltük a csapatkapitányt: *Dávid*
   * Cspatnevet választottunk: *Bigimot*
   * Alapvető adminisztratív dolgok...
 
-= 1. Konzultáció (2010.xx.xx., hely: xxxxx) =
+= 0. Konzultáció (2010.02.08., hely: IB026) =
 
-Az előző mintájára írja be aki éppen szerkeszti...
+LZ. tartotta, eligazítás volt a tárggyal kapcsolatban.
 
-Kis segítség:
+  * RUP-ban kell elkészíteni a projektet.
+  * Először csak egy karakteres felületű program legyen, kifejezetten tesztelési célokra.
+  * A későbbi grafikus felületre ne pazaroljunk túl sok időt. Elegendő, ha csak működik valahogy.
+  * Idén könyebb dolgunk lesz, mert már kész vannak a dokumentációhoz a templatek.
+  * Holnap délutánig kikerül a pontos feladatspecifikáció.
+  * A specifikációt kis mértékben megváltoztatják a szkeleton elkészülését követően.
+  * A hallgatók 90%-a sikeresen teljesíti a tárgyat, nagyrészük 5-össel.
+  * Ha valaki kiesik a munkából azonnal szólni kell, illetve bele kell írni a jegyzőkönyvbe.
+  * A félév során 3 demó lesz, ilyenkor minden csapat egy másik csapat programját teszteli.
+  * A programnak alap JAVAC -al fordulnia kell. Érdemes beadás előtt kipróbálni a HSZK-ban.
+  * A projekt hardver-, és szoftverkövetelménye fixen a HSZK-s gépekkel egyeznek meg. Ezt dokumentálni kell az elején.
+  * Minden dokumentációt frissen kell tartani. Tehát, amennyiben egy hibát kijavítunk, és ezért vissza kell nyúlni egy korábban beadott dokumentumhoz, úgy a módosítást elvégezzük, de nem adjuk be az új változatot csak a legvégén. Mindenesetre írjunk a módosításról egy rövid jegyzőkönyvet.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
+  * Pl. adott egy program ami négyzetes mátrixokkal számol. Változtatás: négyzetes helyett legyen méhsejt alakú.
+  * Nem kell nagy változtatásra számítani, főleg egy jól megtervezett modell esetén.
+
+= 1. Konzultáció (2010.02.xx., hely: xxxxx) =
+
+Még nem volt...
