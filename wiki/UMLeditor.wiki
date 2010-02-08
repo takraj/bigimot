@@ -1,4 +1,4 @@
-#summary Javasolt UML editor
+#summary Javasolt UML editor.
 
 = StarUML =
 
