@@ -24,6 +24,10 @@ LZ. tartotta, eligazítás volt a tárggyal kapcsolatban.
   * A programnak alap JAVAC -al fordulnia kell. Érdemes beadás előtt kipróbálni a HSZK-ban.
   * A projekt hardver-, és szoftverkövetelménye fixen a HSZK-s gépekkel egyeznek meg. Ezt dokumentálni kell az elején.
   * Minden dokumentációt frissen kell tartani. Tehát, amennyiben egy hibát kijavítunk, és ezért vissza kell nyúlni egy korábban beadott dokumentumhoz, úgy a módosítást elvégezzük, de nem adjuk be az új változatot csak a legvégén. Mindenesetre írjunk a módosításról egy rövid jegyzőkönyvet.
+  * A project eleje lesz inkább a nehezebb, hogy ne ütközzön más tárgyak teendőivel.
+  * A konzultációkon értékelik az előzőleg beadott feladatokat és tippeket adnak a következőre, szóval érdemes megjelenni.
+
+
 
 LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * Pl. adott egy program ami négyzetes mátrixokkal számol. Változtatás: négyzetes helyett legyen méhsejt alakú.
