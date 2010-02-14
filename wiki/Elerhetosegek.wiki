@@ -1,4 +1,4 @@
-#summary A csapattagok elérhetősége. Csak a projekt résztvevői láthatják!
+#summary A csapattagok elérhetőségei. Csak a projekt résztvevői láthatják!
 #labels Restrict-View-Commit
 
 == Boros Dávid ==
