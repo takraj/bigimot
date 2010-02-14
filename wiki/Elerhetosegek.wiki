@@ -2,9 +2,9 @@
 #labels Restrict-View-Commit
 
 == Boros Dávid ==
-  * 30/4807337
+  * 30/480-73-37
   * hopaci@yahoo.com
 
 == Takács Rajmund ==
-  * 70/5652457
+  * 70/565-24-57
   * takraj@gmail.com
