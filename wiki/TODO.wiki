@@ -2,14 +2,13 @@
 
 = TODO list az ütemterv szerint=
 
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== 1. Csapatok regisztrációja ==
+  * *Határidő:* február 10.
+  * _ez már megtörtént_ 
 
-*1. Csapatok regisztrációja*
-    * Határidő feb. 10.
-    * ez már megtörtént 
-
-*2. Követelmény, projekt, funkcionalitás*
-    * Határidő feb. 18.
-    * Követelmény definíció, Projekt terv, Szótár, Essential use-case-ek elkészítése
+== 2. Követelmény, projekt, funkcionalitás ==
+  * *Határidő:* február 18.
+  * Követelmény definíció
+  * Projekt terv
+  * Szótár
+  * Essential use-case-ek elkészítése
