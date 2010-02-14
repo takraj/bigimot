@@ -1,17 +1,10 @@
 #summary A csapattagok elérhetősége. Csak a projekt résztvevői láthatják!
 #labels Restrict-View-Commit
 
-= Introduction =
-
-Add your content here.
-
-*Boros Dávid*
+== Boros Dávid ==
   * 30/4807337
   * hopaci@yahoo.com
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Takács Rajmund ==
+  * 70/5652457
+  * takraj@gmail.com
