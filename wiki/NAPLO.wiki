@@ -26,4 +26,4 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Idő:* 2010.02.15. 20:50 - 23:50
 *Résztvevők:* Takács
 
-  * Projekt terv elkészítése
+  * Feladatleírás elkészítése
