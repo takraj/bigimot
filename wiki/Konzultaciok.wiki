@@ -1,5 +1,9 @@
 #summary A konzultációkon elhangzottak összefoglalása.
 
+= Tartalomjegyzék =
+
+<wiki:toc max_depth="3" />
+
 = -1. Konzultáció (2010.02.01., hely: msn) =
 
 Jelenlévők: Boros, Rapp, Molnár, Takács
