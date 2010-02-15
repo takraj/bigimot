@@ -33,6 +33,77 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * Pl. adott egy program ami négyzetes mátrixokkal számol. Változtatás: négyzetes helyett legyen méhsejt alakú.
   * Nem kell nagy változtatásra számítani, főleg egy jól megtervezett modell esetén.
 
-= 1. Konzultáció (2010.02.xx., hely: xxxxx) =
+= 1. Konzultáció (2010.02.15., hely: R4M) =
 
-Még nem volt...
+  * Konzulensek elérhetőségeit ismertették.
+  * Csütörtökön van az anyagleadás, 11:45 - 12:15
+  * Megegyeztünk, hogy minden anyag legyen kész csütörtök reggel 09:00-re.
+  * Konzultáción mindig értékelni fogják az előző heti munkánkat.
+  * Ha nem sikerül a megadott időben leadni a heti anyagot, akkor mindenképp e-mailezzünk a *konzulensnek*.
+  * _A konzulensek elérhetőségeit beírtam az [Elerhetosegek] lapba._
+
+== RUP, milestones ==
+
+  # modell
+  # szkeleton
+  # proto
+  # grafikus
+
+=== I. Modell ===
+
+  * A legfontosabb mérföldkő.
+  * A feladat *szövegéből* kell készíteni egy *UML* modellt.
+    # osztálydiagram
+    # belső működés: hívások, szekvencia diagramm, state chartok, stb...
+
+=== II. Szkeleton ===
+
+  * Ez egy konzolos JAVA alkalmazás
+  * Kérdés - Válasz struktúra, jól tesztelhető, hogy mi mit reagál egy bizonyos bemenetre.
+  * Tulajdonképp elkészítjük a program vázát, de a metódusok törzsét nem írjuk meg, csak amennyire feltétlenül szükséges.
+  * Célszerű megoldás, hogy ezek a metódusok egymást hívogatják.
+
+=== III. Proto ===
+
+  * Függvénytörzsek megírása.
+  * Teljes játék összeáll, de még csak konzolos felülete van.
+  * Alkalmas a tesztfuttatásra.
+
+=== IV. Grafikus felület ===
+
+  * Csak annyira amennyire szükséges.
+  * Nem a csicsa fogja az értékelés alapját adni, hanem a mögötte lévő modell.
+
+== A laborban lévő JAVA verzió ==
+
+  * A laborban *1.6.0_14*-es JAVA runtime van.
+  * Ellenőrzés: {{{ java -version }}}
+  * Kizárólag erre fejleszthetünk, addonok használata nem megengedett.
+
+== Segítség a dokumentációhoz ==
+
+  * Már megvannak a doksi vázak, mindössze be kell írni amit kér.
+
+=== 2.3 Feladatleírás ===
+
+  * Nem átfogalmazás.
+  * Ki irányítja? Ki mozog magától?
+  * *Tipp:* Játékos irányítja a rablót/rendőrt, de esetleg lehet 2-player-mode is benne.
+  * Az utak egysávosak/kétsávosak?
+  * Milyenek a kanyarok?
+  * *Tipp:* Csináljuk 90°-osra, de számítsunk olyan módosításra, hogy bármilyen fokosak lehetnek esetleg.
+  * Táblákat mi találjuk ki.
+  * *Tipp:* Legyen STOP és JELZŐLÁMPA, de ne legyen pl. ELSŐBBSÉGADÁS KÖTELEZŐ.
+
+=== 2.5 Use Case ===
+
+  * Legyen egyszerű, fölösleges túlbonyolítani.
+  * Kilépés is szerepeljen rajta.
+  * Csak olyat tüntessünk fel rajta, amit a felhasználó képes a mi "fekete doboz"-unkkal csinálni. Tehát csak az ő interakciói szerepeljenek rajta.
+
+== Mi lesz a következő héten? ==
+
+  * Osztályok meghatározása a mostani doksi alapján.
+  * NE LEGYEN ISTEN OBJEKTUM!!!!!
+  * Legyen az egész játék amolyan Pac-Man jellegű.
+  * Minél jobban általánosítsunk, használjunk interface-eket.
