@@ -8,13 +8,17 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 = A napló =
 
 *Idő:* 2010.02.01. 21:00 - 21:20
-*Részvevők:* Rapp, Boros, Takács, Molnár
+*Résztvevők:* Rapp, Boros, Takács, Molnár
 
   * Ld. 0. konzultáció
+  * Kapcsolatfelvétel
+  * Csapatnév választása: *Bigimot*
   * Csapat regisztrálása
 
-*Idő:* 2010.xx.xx. xx:xx - xx:xx
-*Részvevők:* Remélhetőleg mindenki...
+*Idő:* 2010.02.15. 18:50 - 19:10
+*Résztvevők:* Boros, Takács, Molnár
 
-  * Első meeting...
-  * Csak azért írtam be, hogy lássátok hogy milyen formában kell vezetni a naplót...
+  * *Döntés:* Boros elkészíti a *Követelmény Definíciót* és a *Projekt tervet*
+  * *Döntés:* Takács elkészíti a *Feladatleírást*
+  * *Döntés:* Molnár és Rapp elkészítik a *Szótárat* és az *Essential Use-Case diagrammokat*
+  * Megbeszéltük, hogy milyen programokat fogunk használni a projekt alatt.
