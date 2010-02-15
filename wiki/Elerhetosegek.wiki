@@ -1,5 +1,15 @@
-#summary A csapattagok elérhetőségei. Csak a projekt résztvevői láthatják!
+#summary A csapattagok/konzulensek elérhetőségei. Csak a projekt résztvevői láthatják!
 #labels Restrict-View-Commit
+
+= Konzulensek =
+
+== Bíró Barna ==
+  * barna.biro@gmail.com
+
+== Nagy Máté ==
+  * mathe2x@gmail.com
+
+= Tagok =
 
 == Boros Dávid ==
   * 30/480-73-37
