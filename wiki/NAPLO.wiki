@@ -22,3 +22,8 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
   * *Döntés:* Takács elkészíti a *Feladatleírást*
   * *Döntés:* Molnár és Rapp elkészítik a *Szótárat* és az *Essential Use-Case diagrammokat*
   * Megbeszéltük, hogy milyen programokat fogunk használni a projekt alatt.
+
+*Idő:* 2010.02.15. 20:50 - 23:50
+*Résztvevők:* Takács
+
+  * Projekt terv elkészítése
