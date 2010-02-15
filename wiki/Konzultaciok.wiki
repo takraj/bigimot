@@ -37,7 +37,7 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * Pl. adott egy program ami négyzetes mátrixokkal számol. Változtatás: négyzetes helyett legyen méhsejt alakú.
   * Nem kell nagy változtatásra számítani, főleg egy jól megtervezett modell esetén.
 
-= 1. Konzultáció (2010.02.15., hely: R4M) =
+= 1. Konzultáció (2010.02.15., hely: R.4M) =
 
   * Konzulensek elérhetőségeit ismertették.
   * Csütörtökön van az anyagleadás, 11:45 - 12:15
