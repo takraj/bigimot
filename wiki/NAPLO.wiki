@@ -31,4 +31,4 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Idő:* 2010.02.17. 21:00 - 23:55
 *Résztvevők:* Boros
 
-  * Követelmény definívió, Projekt terv elkészítése
+  * Követelmény definíció, Projekt terv elkészítése
