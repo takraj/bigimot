@@ -27,3 +27,8 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Takács
 
   * Feladatleírás elkészítése
+
+*Idő:* 2010.02.17. 21:00 - 23:55
+*Résztvevők:* Boros
+
+  * Követelmény definívió, Projekt terv elkészítése
