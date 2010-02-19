@@ -765,10 +765,10 @@
 <XPD:REF name="Model">jtDRg0kjF02ncnPdRk2qwwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailMultiplicityLabel" type="EdgeLabelView" guid="jMcTcRFa9kSAwRwjqvpynwAA">
-<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="Alpha" type="real">-0,523598775598299</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">25</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epTail</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">0..1</XPD:ATTR>
 <XPD:REF name="Model">xwdZgiXSKU+O7Grt2kZfagAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="HeadPropertyLabel" type="EdgeLabelView" guid="yFIo99Zi0UK2CmcbihzXdAAA">
@@ -1327,7 +1327,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#OwnedElements" type="integer">35</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">33</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="QHe9hgkHVEWnE0ZaEUy9qQAA">
 <XPD:ATTR name="Name" type="string">City</XPD:ATTR>
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
@@ -1363,9 +1363,8 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">9vcG0SyqpUCkbkKPdA68nAAA</XPD:REF>
 <XPD:ATTR name="#ClientDependencies" type="integer">1</XPD:ATTR>
 <XPD:REF name="ClientDependencies[0]">n2WzRHDSj0WnhvU0MAVtkwAA</XPD:REF>
-<XPD:ATTR name="#Specializations" type="integer">2</XPD:ATTR>
+<XPD:ATTR name="#Specializations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Specializations[0]">6bzIyHU3X0aUJ/jxW1OkRgAA</XPD:REF>
-<XPD:REF name="Specializations[1]">g+9nJECVxkuXLvkyJ3lUdAAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">jtDRg0kjF02ncnPdRk2qwwAA</XPD:REF>
 </XPD:OBJ>
@@ -1551,18 +1550,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[2]">j4yy6UkW3kC3Sf8e3N/4XQAA</XPD:REF>
 <XPD:REF name="Views[3]">4Zxu+lVWv0a/HRRjDycNnAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[19]" type="UMLClass" guid="8BK/teG2gkGvGiGlbHEWxwAA">
-<XPD:ATTR name="Name" type="string">OneWayRoad</XPD:ATTR>
-<XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
-<XPD:ATTR name="#Generalizations" type="integer">1</XPD:ATTR>
-<XPD:REF name="Generalizations[0]">g+9nJECVxkuXLvkyJ3lUdAAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[20]" type="UMLGeneralization" guid="g+9nJECVxkuXLvkyJ3lUdAAA">
-<XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
-<XPD:REF name="Child">8BK/teG2gkGvGiGlbHEWxwAA</XPD:REF>
-<XPD:REF name="Parent">gj7t2bCyDU2OpYeip5wiCgAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedElements[21]" type="UMLAssociation" guid="Nq5F9iy0I0izBAr6r4+D7wAA">
+<XPD:OBJ name="OwnedElements[19]" type="UMLAssociation" guid="Nq5F9iy0I0izBAr6r4+D7wAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">WcSp5pG1tk+U0dtu9cF2dwAA</XPD:REF>
@@ -1591,7 +1579,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">cvS/UJ7rN0iKFwI5M4iwSwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[22]" type="UMLAssociation" guid="6mPIUU6UAkaPIOiN63oyCwAA">
+<XPD:OBJ name="OwnedElements[20]" type="UMLAssociation" guid="6mPIUU6UAkaPIOiN63oyCwAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">sX7UIyDt5E+TjPN8hZcdawAA</XPD:REF>
@@ -1620,7 +1608,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">I8sz7e1/1kyrTJTPhKNS5wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[23]" type="UMLAssociation" guid="T+oO0PERtECkDGWJpQhR0AAA">
+<XPD:OBJ name="OwnedElements[21]" type="UMLAssociation" guid="T+oO0PERtECkDGWJpQhR0AAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">RyPoOInXkkOEZr7rqTDKhwAA</XPD:REF>
@@ -1629,6 +1617,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">1Fs7lVIgG0+4mZz1EkHZ0QAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="xwdZgiXSKU+O7Grt2kZfagAA">
+<XPD:ATTR name="Multiplicity" type="string">0..1</XPD:ATTR>
 <XPD:REF name="Association">T+oO0PERtECkDGWJpQhR0AAA</XPD:REF>
 <XPD:REF name="Participant">BkJepFj/106FzpTw+BROngAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1648,7 +1637,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">QLMBlqSqDE6f9H/QWGhY+QAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[24]" type="UMLAssociation" guid="NJ2awXhsK022z1WNxb9Z8AAA">
+<XPD:OBJ name="OwnedElements[22]" type="UMLAssociation" guid="NJ2awXhsK022z1WNxb9Z8AAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="ZzTlLXK5r0SeQIwIBEV2KAAA">
@@ -1661,7 +1650,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Participant">P0ADbBZ7s0m/BM4F6r9h6wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[25]" type="UMLAssociation" guid="9/Cp+aG/x026cznWLy7cKgAA">
+<XPD:OBJ name="OwnedElements[23]" type="UMLAssociation" guid="9/Cp+aG/x026cznWLy7cKgAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">zDGdj8oKuEiMwTa0AMH+hgAA</XPD:REF>
@@ -1690,7 +1679,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">Yr2LEv43vUmzyPKVeaFSDwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[26]" type="UMLClass" guid="SdkR76tHVUORTTlJsha24wAA">
+<XPD:OBJ name="OwnedElements[24]" type="UMLClass" guid="SdkR76tHVUORTTlJsha24wAA">
 <XPD:ATTR name="Name" type="string">TrafficLight</XPD:ATTR>
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1701,7 +1690,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:ATTR name="#ClientDependencies" type="integer">1</XPD:ATTR>
 <XPD:REF name="ClientDependencies[0]">AQkZfMm1BkmRDXxlHa2/AwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[27]" type="UMLRealization" guid="AQkZfMm1BkmRDXxlHa2/AwAA">
+<XPD:OBJ name="OwnedElements[25]" type="UMLRealization" guid="AQkZfMm1BkmRDXxlHa2/AwAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:REF name="Client">SdkR76tHVUORTTlJsha24wAA</XPD:REF>
 <XPD:REF name="Supplier">aalVl/jLgEC2XixUeRzshAAA</XPD:REF>
@@ -1711,7 +1700,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[2]">XL75z8IDb0uvWy0SLoMkPgAA</XPD:REF>
 <XPD:REF name="Views[3]">QyRwv1zXiU+oLtUSO0sExgAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[28]" type="UMLClass" guid="0WkiBhew9EGDUjQca/nTkwAA">
+<XPD:OBJ name="OwnedElements[26]" type="UMLClass" guid="0WkiBhew9EGDUjQca/nTkwAA">
 <XPD:ATTR name="Name" type="string">Building</XPD:ATTR>
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1725,7 +1714,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Specializations[0]">NAfqzXjjrEqUrD6s6MhkegAA</XPD:REF>
 <XPD:REF name="Specializations[1]">YGXiYoJ8pk+VBeEAPYl34gAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[29]" type="UMLRealization" guid="HTl8/HOCIkSVRxVFb9eKOgAA">
+<XPD:OBJ name="OwnedElements[27]" type="UMLRealization" guid="HTl8/HOCIkSVRxVFb9eKOgAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:REF name="Client">0WkiBhew9EGDUjQca/nTkwAA</XPD:REF>
 <XPD:REF name="Supplier">AhaF2Ulfgk6hrFPTSBiGyQAA</XPD:REF>
@@ -1735,7 +1724,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[2]">c4vHiBugxkGvj6O0K93E+QAA</XPD:REF>
 <XPD:REF name="Views[3]">vJpC0WnojkKXscWsslod+wAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[30]" type="UMLClass" guid="/iEL+1Cef0aM6eipxlwhkAAA">
+<XPD:OBJ name="OwnedElements[28]" type="UMLClass" guid="/iEL+1Cef0aM6eipxlwhkAAA">
 <XPD:ATTR name="Name" type="string">Bank</XPD:ATTR>
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1746,7 +1735,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:ATTR name="#Generalizations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Generalizations[0]">NAfqzXjjrEqUrD6s6MhkegAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[31]" type="UMLClass" guid="rQlYgksR8E6ytvOyfNQwtwAA">
+<XPD:OBJ name="OwnedElements[29]" type="UMLClass" guid="rQlYgksR8E6ytvOyfNQwtwAA">
 <XPD:ATTR name="Name" type="string">Hideout</XPD:ATTR>
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1757,7 +1746,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:ATTR name="#Generalizations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Generalizations[0]">YGXiYoJ8pk+VBeEAPYl34gAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[32]" type="UMLGeneralization" guid="NAfqzXjjrEqUrD6s6MhkegAA">
+<XPD:OBJ name="OwnedElements[30]" type="UMLGeneralization" guid="NAfqzXjjrEqUrD6s6MhkegAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:REF name="Child">/iEL+1Cef0aM6eipxlwhkAAA</XPD:REF>
 <XPD:REF name="Parent">0WkiBhew9EGDUjQca/nTkwAA</XPD:REF>
@@ -1767,7 +1756,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[2]">DhIv/sxM6kSG6prJeInDYgAA</XPD:REF>
 <XPD:REF name="Views[3]">yYnqZiQ3xkibf9Um3WU7aQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[33]" type="UMLGeneralization" guid="YGXiYoJ8pk+VBeEAPYl34gAA">
+<XPD:OBJ name="OwnedElements[31]" type="UMLGeneralization" guid="YGXiYoJ8pk+VBeEAPYl34gAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:REF name="Child">rQlYgksR8E6ytvOyfNQwtwAA</XPD:REF>
 <XPD:REF name="Parent">0WkiBhew9EGDUjQca/nTkwAA</XPD:REF>
@@ -1777,7 +1766,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[2]">3WEOlgM4H0+01RUMmEy+iwAA</XPD:REF>
 <XPD:REF name="Views[3]">3GbTB1fgdEqJZLHMNV3RrgAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedElements[34]" type="UMLAssociation" guid="tBzBnYp+OUOH8TCOg/puVQAA">
+<XPD:OBJ name="OwnedElements[32]" type="UMLAssociation" guid="tBzBnYp+OUOH8TCOg/puVQAA">
 <XPD:REF name="Namespace">uifaz6urbEykQP0ZHx7NNgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">2mUt5+Ys00CtUvGKHBsSDgAA</XPD:REF>
@@ -1791,8 +1780,8 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Participant">BkJepFj/106FzpTw+BROngAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">IzevL9oI30i9oNm/Xb41kwAA</XPD:REF>
-<XPD:REF name="Views[1]">KNM5d0q5ukKkcwQIEsnbyAAA</XPD:REF>
-<XPD:REF name="Views[2]">orTn7wC5F0yqV/eaJ1BSPAAA</XPD:REF>
+<XPD:REF name="Views[1]">orTn7wC5F0yqV/eaJ1BSPAAA</XPD:REF>
+<XPD:REF name="Views[2]">KNM5d0q5ukKkcwQIEsnbyAAA</XPD:REF>
 <XPD:REF name="Views[3]">n6+MUmopcUeXzPHL2UzDBwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="OhYCN1cJj0efw4F3IlAbEAAA">
@@ -1801,8 +1790,8 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Participant">QHe9hgkHVEWnE0ZaEUy9qQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">tqbYTSa4R02XSSu3MiSXlwAA</XPD:REF>
-<XPD:REF name="Views[1]">JQBL16Un4ky52S9xRBimewAA</XPD:REF>
-<XPD:REF name="Views[2]">mX2bsO5Y/0yOlNGZtAT+7wAA</XPD:REF>
+<XPD:REF name="Views[1]">mX2bsO5Y/0yOlNGZtAT+7wAA</XPD:REF>
+<XPD:REF name="Views[2]">JQBL16Un4ky52S9xRBimewAA</XPD:REF>
 <XPD:REF name="Views[3]">N3hJ2PNxaUuBuJkglv6B5gAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
