@@ -683,7 +683,7 @@
 <XPD:ATTR name="Alpha" type="real">-0,523598775598299</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">25</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epTail</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">2</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">1</XPD:ATTR>
 <XPD:REF name="Model">eG8iLz7OLEu+TLLs4xZLKQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="HeadPropertyLabel" type="EdgeLabelView" guid="QLbS+ECzYEyJzi7VEPDbiQAA">
@@ -765,10 +765,10 @@
 <XPD:REF name="Model">jtDRg0kjF02ncnPdRk2qwwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailMultiplicityLabel" type="EdgeLabelView" guid="jMcTcRFa9kSAwRwjqvpynwAA">
-<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
 <XPD:ATTR name="Alpha" type="real">-0,523598775598299</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">25</XPD:ATTR>
 <XPD:ATTR name="EdgePosition" type="EdgePositionKind">epTail</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">0..1</XPD:ATTR>
 <XPD:REF name="Model">xwdZgiXSKU+O7Grt2kZfagAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="HeadPropertyLabel" type="EdgeLabelView" guid="yFIo99Zi0UK2CmcbihzXdAAA">
@@ -1600,7 +1600,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">gktYQ6EoKUiCWVW9Kib7fwAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="eG8iLz7OLEu+TLLs4xZLKQAA">
-<XPD:ATTR name="Multiplicity" type="string">2</XPD:ATTR>
+<XPD:ATTR name="Multiplicity" type="string">1</XPD:ATTR>
 <XPD:REF name="Association">6mPIUU6UAkaPIOiN63oyCwAA</XPD:REF>
 <XPD:REF name="Participant">aalVl/jLgEC2XixUeRzshAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1629,6 +1629,7 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Views[3]">1Fs7lVIgG0+4mZz1EkHZ0QAA</XPD:REF>
 <XPD:ATTR name="#Connections" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Connections[0]" type="UMLAssociationEnd" guid="xwdZgiXSKU+O7Grt2kZfagAA">
+<XPD:ATTR name="Multiplicity" type="string">0..1</XPD:ATTR>
 <XPD:REF name="Association">T+oO0PERtECkDGWJpQhR0AAA</XPD:REF>
 <XPD:REF name="Participant">BkJepFj/106FzpTw+BROngAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
@@ -1791,8 +1792,8 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Participant">BkJepFj/106FzpTw+BROngAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">IzevL9oI30i9oNm/Xb41kwAA</XPD:REF>
-<XPD:REF name="Views[1]">KNM5d0q5ukKkcwQIEsnbyAAA</XPD:REF>
-<XPD:REF name="Views[2]">orTn7wC5F0yqV/eaJ1BSPAAA</XPD:REF>
+<XPD:REF name="Views[1]">orTn7wC5F0yqV/eaJ1BSPAAA</XPD:REF>
+<XPD:REF name="Views[2]">KNM5d0q5ukKkcwQIEsnbyAAA</XPD:REF>
 <XPD:REF name="Views[3]">n6+MUmopcUeXzPHL2UzDBwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="OhYCN1cJj0efw4F3IlAbEAAA">
@@ -1801,8 +1802,8 @@ a darabszámukat. Viszont azt nem tudja, hogy a jármű
 <XPD:REF name="Participant">QHe9hgkHVEWnE0ZaEUy9qQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">tqbYTSa4R02XSSu3MiSXlwAA</XPD:REF>
-<XPD:REF name="Views[1]">JQBL16Un4ky52S9xRBimewAA</XPD:REF>
-<XPD:REF name="Views[2]">mX2bsO5Y/0yOlNGZtAT+7wAA</XPD:REF>
+<XPD:REF name="Views[1]">mX2bsO5Y/0yOlNGZtAT+7wAA</XPD:REF>
+<XPD:REF name="Views[2]">JQBL16Un4ky52S9xRBimewAA</XPD:REF>
 <XPD:REF name="Views[3]">N3hJ2PNxaUuBuJkglv6B5gAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
