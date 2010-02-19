@@ -32,3 +32,18 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Boros
 
   * Követelmény definíció, Projekt terv elkészítése
+
+*Idő:* 2010.02.17. 20:00 - 21:00
+*Résztvevők:* Takács
+
+  * Feladatleírás javítása, bővítése
+
+*Idő:* 2010.02.17. 20:30 - 23:30
+*Résztvevők:* Molnár
+
+  * Essential Use Case, Szótár elkészítése
+
+*Idő:* 2010.02.18. 01:00 - 02:00
+*Résztvevők:* Rapp
+
+  * Kegészíti, javítja, és formázza a dokumentumot.
