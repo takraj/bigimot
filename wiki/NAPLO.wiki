@@ -47,3 +47,11 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Rapp
 
   * Kegészíti, javítja, és formázza a dokumentumot.
+
+*Idő:* 2010.02.22. 21:35 - 22:15
+*Résztvevők:* Rapp, Boros, Takács, Molnár
+
+  * *Döntés:* Rajmund elkészíti a *Statikus struktúra diagramokat* és a *State-chartokat*
+  * *Döntés:* Boros elkészíti az *Osztályok leírását*
+  * *Döntés:* Rapp elkészíti az *Objektum katalógust*
+  * *Döntés:* Molnár elkészíti a *Szekvencia diagramokat*
