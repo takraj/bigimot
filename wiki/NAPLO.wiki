@@ -70,3 +70,7 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Boros
 
   * Elkészíti az Osztályok leírását
+*Idő:* 2010.02.24. 20:30 - 24:00
+*Résztvevők:* Molnár
+
+  * Elkészíti a szekvencia-diagrammokat
