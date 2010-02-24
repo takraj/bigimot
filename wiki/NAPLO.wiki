@@ -66,10 +66,16 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 
   * State-chartokat készít, illetve osztálydiagramon dolgozik.
 
+*Idő:* 2010.02.24. 16:00 - 18:00
+*Résztvevők:* Boros
+
+  * Elkészíti a kezdetleges class diagrammot
+
 *Idő:* 2010.02.24. 21:00 - 24:00
 *Résztvevők:* Boros
 
   * Elkészíti az Osztályok leírását
+
 *Idő:* 2010.02.24. 21:00 - 24:00
 *Résztvevők:* Molnár
 
