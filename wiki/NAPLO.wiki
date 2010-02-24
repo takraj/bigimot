@@ -65,3 +65,8 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Takács
 
   * State-chartokat készít, illetve osztálydiagramon dolgozik.
+
+*Idő:* 2010.02.24. 21:00 - 24:00
+*Résztvevők:* Boros
+
+  * Elkészíti az Osztályok leírását
