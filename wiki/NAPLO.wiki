@@ -55,3 +55,13 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
   * *Döntés:* Boros elkészíti az *Osztályok leírását*
   * *Döntés:* Rapp elkészíti az *Objektum katalógust*
   * *Döntés:* Molnár elkészíti a *Szekvencia diagramokat*
+
+*Idő:* 2010.02.24. 20:15 - 22:15
+*Résztvevők:* Rapp
+
+  * Objektum katalógust készít.
+
+*Idő:* 2010.02.24. 20:00 - 23:00
+*Résztvevők:* Takács
+
+  * State-chartokat készít, illetve osztálydiagramon dolgozik.
