@@ -80,3 +80,8 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Molnár
 
   * Elkészíti a szekvencia-diagrammokat
+
+*Idő:* 2010.02.25. 10:00 - 11:00
+*Résztvevők:* Takács
+
+  * Dokumentum formázása, véglegesítése
