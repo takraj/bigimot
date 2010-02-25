@@ -111,3 +111,23 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * NE LEGYEN ISTEN OBJEKTUM!!!!!
   * Legyen az egész játék amolyan Pac-Man jellegű.
   * Minél jobban általánosítsunk, használjunk interface-eket.
+
+= 2. Konzultáció (2010.02.22., hely: R.4M) =
+
+  * Autók nem ismerhetik a többi autót.
+  * Ne legyen isten objektumunk.
+  * 3.1: Mi mire való?
+  * 3.2: Az attribútum az objektum állapotát írja le.
+  * 3.3: Class Diagram
+  * 3.4: Szekvencia Diagram, amiből majd kód lesz. Class Diagramal konzisztens legyen. Legyen belőle inicializálás is, ami nem csak függvények végighívása, meg create. Tehát követhető legyen az alapján, hogy mi zajlik le, mikor elkészül a pálya pl.
+  * 3.5: State Chart, pl. rendőr.
+  * Mindenképp egyszálú legyen a program, tehát nincs aszinkron hívás.
+  * Márc 22-én szkeleton teszt, úgy készüljünk. Mindenkinek kötelező a megjelenés!!
+  * Doksinál nagyon kell figyelni a külalakra! Legyen sorkizárt, és helyesírás szempontjából kifogástalan. Használjunk elválasztásokat!
+
+== Megjegyzések a mi munkánkkal kapcsolatban ==
+
+  * Tulajdonképp nem volt sok baj vele, néhol rosszul volt megfogalmazva a dolog.
+  * Ajánlották, hogy ne bonyolódjunk bele a többsávos utakba, és ne "gondolkodjon" a rendőr. Elég, ha csak mászkál, és ha nekimegyünk akkor Game Over.
+  * Előzést úgy kéne megoldani, hogy egyszerűen átugorják egymást a kocsik.
+  * Lényeg, hogy kicsit túlspecifikáltuk, lazítsunk rajta, mert az a tapasztalat, hogy egy ilyen projektet nem tudnak a csapatok időre befejezni.
