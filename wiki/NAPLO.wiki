@@ -51,7 +51,7 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Idő:* 2010.02.22. 21:35 - 22:15
 *Résztvevők:* Rapp, Boros, Takács, Molnár
 
-  * *Döntés:* Rajmund elkészíti a *Statikus struktúra diagramokat* és a *State-chartokat*
+  * *Döntés:* Takács elkészíti a *Statikus struktúra diagramokat* és a *State-chartokat*
   * *Döntés:* Boros elkészíti az *Osztályok leírását*
   * *Döntés:* Rapp elkészíti az *Objektum katalógust*
   * *Döntés:* Molnár elkészíti a *Szekvencia diagramokat*
