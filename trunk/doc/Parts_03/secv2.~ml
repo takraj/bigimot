@@ -15,7 +15,7 @@
 <XPD:REF name="Namespace">yc2DcXNJAUC0zKpYTAgAswAA</XPD:REF>
 <XPD:ATTR name="#OwnedCollaborationInstanceSets" type="integer">6</XPD:ATTR>
 <XPD:OBJ name="OwnedCollaborationInstanceSets[0]" type="UMLCollaborationInstanceSet" guid="uqIoKq/t0Ee4B8HW3CQClwAA">
-<XPD:ATTR name="Name" type="string">MoveCar</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">CollaborationInstanceSet1</XPD:ATTR>
 <XPD:REF name="RepresentedClassifier">tW0f2H1yQEWGiFHJvmvKzgAA</XPD:REF>
 <XPD:ATTR name="#InteractionInstanceSets" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="InteractionInstanceSets[0]" type="UMLInteractionInstanceSet" guid="H6CqRPXSa0OqmXxkpupgBgAA">
@@ -23,7 +23,7 @@
 <XPD:REF name="Context">uqIoKq/t0Ee4B8HW3CQClwAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="YJJyPRHjC0mlfvndMx/q9QAA">
-<XPD:ATTR name="Name" type="string">MoveCar</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">SequenceDiagram2</XPD:ATTR>
 <XPD:REF name="DiagramOwner">H6CqRPXSa0OqmXxkpupgBgAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLSequenceDiagramView" guid="XI0305M13E2s9Ci8AAXDxAAA">
 <XPD:REF name="Diagram">YJJyPRHjC0mlfvndMx/q9QAA</XPD:REF>
@@ -37,7 +37,7 @@
 <XPD:ATTR name="Height" type="integer">225</XPD:ATTR>
 <XPD:REF name="Model">s30Jdt2XZ0WrXCkZb7YzFwAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="/nihNMVxCUG09pYb+2nIcwAA">
-<XPD:ATTR name="Text" type="string">MoveCar</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Frame1</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="oTf1Ii54L0uKoy2OqBe0hgAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -271,7 +271,7 @@
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="s30Jdt2XZ0WrXCkZb7YzFwAA">
-<XPD:ATTR name="Name" type="string">MoveCar</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Frame1</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">H6CqRPXSa0OqmXxkpupgBgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
