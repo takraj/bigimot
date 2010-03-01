@@ -143,6 +143,7 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * 5.2: nem kell túl sokat írni, nem is nagyon tudnánk.
   * 5.3: tkp. "Ezt fogja látni a felhasználó...", tételesen írjuk le. Mindenről legyen use-case is!
   * 5.4: Ugyanaz kb., mint a 3. és a 4. doksinál.
+  * Ha valamit módosítunk a modellen, akkor adjuk be Appendixként.
 
 == Megjegyzések a mi munkánkkal kapcsolatban ==
 
