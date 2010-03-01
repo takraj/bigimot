@@ -131,3 +131,24 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * Ajánlották, hogy ne bonyolódjunk bele a többsávos utakba, és ne "gondolkodjon" a rendőr. Elég, ha csak mászkál, és ha nekimegyünk akkor Game Over.
   * Előzést úgy kéne megoldani, hogy egyszerűen átugorják egymást a kocsik.
   * Lényeg, hogy kicsit túlspecifikáltuk, lazítsunk rajta, mert az a tapasztalat, hogy egy ilyen projektet nem tudnak a csapatok időre befejezni.
+
+
+= 3. Konzultáció (2010.03.01., hely: R.4M) =
+
+  * Szkeleton: Írja ki a képernyőre, h milyen függvényhívások zajlanak le.
+  * Minimálisan szükséges objektumokat példányosítsunk csak.
+  * NINCS játéklogika!!
+  * Kérje be a tesztelőtől, h merre menjen kereszteződésben a tetszőleges autó.
+  * 5.1-ben pl. milyen szituációt szeretne látni a felhasználó?
+  * 5.2: nem kell túl sokat írni, nem is nagyon tudnánk.
+  * 5.3: tkp. "Ezt fogja látni a felhasználó...", tételesen írjuk le. Mindenről legyen use-case is!
+  * 5.4: Ugyanaz kb., mint a 3. és a 4. doksinál.
+
+== Megjegyzések a mi munkánkkal kapcsolatban ==
+
+  * Class Diagramot át kell alakítani.
+  * Szekvenciadiagramot kicsit pontosítani.
+  * A leírások néhol ellentmondanak, illetve hiányosak.
+  * Dolgozzunk jobban össze.
+  * State-Chart és init szekvenciadiagram rendben van.
+  * 8 pont a 20-ból.
