@@ -151,4 +151,5 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * A leírások néhol ellentmondanak, illetve hiányosak.
   * Dolgozzunk jobban össze.
   * State-Chart és init szekvenciadiagram rendben van.
+  * Bármi gond van, nyugodtan írjunk e-mailt.
   * 8 pont a 20-ból.
