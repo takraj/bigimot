@@ -154,3 +154,62 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
   * State-Chart és init szekvenciadiagram rendben van.
   * Bármi gond van, nyugodtan írjunk e-mailt.
   * 8 pont a 20-ból.
+
+= 4. Konzultáció (2010.03.08., hely: R.4M) =
+
+  * Március 15-én szünet lesz, de csütörtökre le kell adni ettől függetlenül a feladatot.
+  * Március 22-én közös *szkeleton* teszt lesz, *MINDEN CSAPATTAG JELENJEN MEG!!*
+
+== 5. beadandó infói ==
+
+  * Architektúra részben le kell írni, hogy:
+    * A program 1 szálon fut, nem foglalkozunk szálkezeléssel.
+    * Csinálni kell egy osztályt a felhasználói I/O-hoz, amit nagyjából le kell itt dokumentálni. Ezt a későbbiek folyamán nem használjuk fel.
+  * Még nem foglalkozunk az MVC elvekkel.
+  * A szkeletonban nincs logika, mindent a felhasználó irányít. Pl. elágazásnál megkérdezi. Ezeket use-case-en ábrázolni kell.
+  * Sok extra use-case lesz, minden interakciós lehetőségről.
+  * Amiről van szekvencia diagram, az feltétlen játszódjon le a szkeletonban.
+  * Célszerű letölteni egy már kész szkeletont, és áttanulmányozni.
+
+== 6. beadandó infói ==
+
+  * A kódot fel kell tölteni, a doksit ki kell nyomtatni.
+  * Határidő ugyanaz mindkettőre.
+  * Kritériumok:
+    * Egyetlen szabványos *ZIP* fájl legyen.
+    * Összesen 3x kísérelhetjük meg a feltöltést, utána a rendszer blokkol.
+    * *_KELL_* csinálni JavaDOC-ot, amit csatolunk a program mellé.
+      * Ez egy generált dokumentum.
+      * NetBeans és Eclipse tudja.
+      * Szabványos kommentezésből készül.
+      * A legtöbb fejlesztőkörnyezet ad hozzá némi támogatást.
+    * Csak a forráskódot ({{{*.java}}}) szabad feltölteni, {{{*.class}}} fájlokat nem!
+    * Nem tölthetjük fel az egész projektmappát, úgyis konzolról fordítunk.
+  * Ha nem fordul le a HSZK-ban valamiért a program, akkor már nincs lehetőség a projekt folytatására, megbuktunk. Mindenképp célszerű kipróbálni teszt előtt itt is.
+
+=== 6.1 ===
+
+  * Hogyan fordítjuk, hogyan indítjuk?
+  * Nagyon részletesen kell!
+  * Mindenképp konzolos fordítás!
+  * Csinálhatunk batch fájlt, amit mellékelünk feltöltéskor. Külön fordításra, külön futtatásra.
+  * Alapból a HSZK gépein nincsenek beállítva a környezeti változók, erről nekünk kell gondoskodnunk. ({{{PATH=...}}})
+  * *HSZK*-ban a javac.exe és a java.exe elérési útja:
+    * {{{D:\Program Files\Java\jdk1.6.0_14\bin}}}
+
+=== 6.1.1 ===
+
+Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a zip-et, amiben megtalálható.
+
+=== 6.2 ===
+
+  * Értékelés, hogy eddig hogy sikerült a csapatnak összerázódnia, együttműködnie.
+  * Hogy sikerült a munkamegosztás? Táblázatba beírni %-ban is!
+    * A táblázatból hiányzik az aláírás mező, de ettől még *ALÁ KELL ÍRNI MINDENKINEK!*
+  * Ha voltak konfliktusok, akkor azokat is le kell írni.
+
+== Megjegyzések a mi munkánkkal kapcsolatban ==
+
+  * Class Diagram-ban volt egy elvi hiba: nem szabad *változóval* eldönteni, hogy ki micsoda. Függvényt kell írni, és azt felüldefiniálni. Ez az épületek résznél volt.
+  * Szekvencia Diagramokból nem derült ki, hogy mi történik kiértékeléskor.
+  * 18 pont a 30-ból.
