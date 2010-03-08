@@ -10,7 +10,7 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Idő:* 2010.02.01. 21:00 - 21:20
 *Résztvevők:* Rapp, Boros, Takács, Molnár
 
-  * Ld. 0. konzultáció
+  * Ld. -1. konzultáció
   * Kapcsolatfelvétel
   * Csapatnév választása: *Bigimot*
   * Csapat regisztrálása
