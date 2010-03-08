@@ -85,3 +85,44 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Takács
 
   * Dokumentum formázása, véglegesítése
+
+*Idő:* 2010.03.01. 18:00 - 18:30
+*Résztvevők:* Molnár, Boros
+
+  * *Döntés:* Molnár elkészíti az *szekvencia diagramokat* és az *objektumkatalógust*.
+  * *Döntés:* Boros az *osztálydiagrammot*, és az osztályok leírását.
+
+*Idő:* 2010.03.02. 19:00 - 22:00
+*Résztvevők:* Boros
+
+  * Elkészíti az osztálydiagrammot.
+
+*Idő:* 2010.03.03. 08:00 - 09:00
+*Résztvevők:* Molnár
+
+  * Javítja az osztálydiagrammot.
+
+*Idő:* 2010.03.03. 09:00 - 11:30
+*Résztvevők:* Molnár
+
+  * Elkészíti a szekvencia diagrammokat.
+
+*Idő:* 2010.03.03. 20:00 - 22:30
+*Résztvevők:* Boros
+
+  * Elkészíti a az osztályok leírását.
+
+*Idő:* 2010.03.03. 20:00 - 21:30
+*Résztvevők:* Molnár
+
+  * Elkészíti az objektumkatalógust.
+
+*Idő:* 2010.03.03. 23:00 - 01:00
+*Résztvevők:* Boros
+
+  * Átszerkeszti, formázza az elkészült dokumentumot.
+
+*Idő:* 2010.03.04. 09:00 - 09:30
+*Résztvevők:* Rapp
+
+  * Elkészült dokumentum ellenőrzése, gépelési hibák javítása.
