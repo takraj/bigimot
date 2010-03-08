@@ -180,7 +180,7 @@ LZ. adott egy példát, hogy milyen változtatásra lehet számítani:
     * Összesen 3x kísérelhetjük meg a feltöltést, utána a rendszer blokkol.
     * *_KELL_* csinálni JavaDOC-ot, amit csatolunk a program mellé.
       * Ez egy generált dokumentum.
-      * NetBeans és Eclipse tudja.
+      * A Netbeans és az Eclipse tudja alapból.
       * Szabványos kommentezésből készül.
       * A legtöbb fejlesztőkörnyezet ad hozzá némi támogatást.
     * Csak a forráskódot ({{{*.java}}}) szabad feltölteni, {{{*.class}}} fájlokat nem!
