@@ -126,3 +126,8 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Rapp
 
   * Elkészült dokumentum ellenőrzése, gépelési hibák javítása.
+
+*Idő:* 2010.03.09. 20:30 - 23:30
+*Résztvevők:* Takács
+
+  * Architektúra és felület terv, dialógusok elkészítése.
