@@ -90,7 +90,7 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Molnár, Boros
 
   * *Döntés:* Molnár elkészíti az *szekvencia diagramokat* és az *objektumkatalógust*.
-  * *Döntés:* Boros az *osztálydiagrammot*, és az osztályok leírását.
+  * *Döntés:* Boros elkészíti az *osztálydiagrammot*, és az osztályok leírását.
 
 *Idő:* 2010.03.02. 19:00 - 22:00
 *Résztvevők:* Boros
@@ -127,7 +127,24 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 
   * Elkészült dokumentum ellenőrzése, gépelési hibák javítása.
 
+*Idő:* 2010.03.08. 18:00 - 18:30
+*Résztvevők:* Boros, Takács, Rapp
+
+  * *Döntés:* Takács elkészíti a *játékos use-caset*, az *architektúrát*, és a *felület tervet*.
+  * *Döntés:* Boros elkészíti a *belső szekvenciadiagrammokat*.
+  * *Döntés:* Rapp elkészíti az *óra use-caset*.
+
 *Idő:* 2010.03.09. 20:30 - 23:30
 *Résztvevők:* Takács
 
   * Architektúra és felület terv, dialógusok elkészítése.
+
+*Idő:* 2010.03.09. 20:30 - 22:00
+*Résztvevők:* Rapp
+
+  * Use-Case diagram készítése az óra általi vezérlésekre, hozzá való leírással.
+
+*Idő:* 2010.03.10. 22:30 - 00:00
+*Résztvevők:* Takács
+
+  * Use-Case diagram készítése a játékos általi interakciókra, use-case leírások készítése, illetve kisebb kiegészítések a felület tervnél és az architektúránál.
