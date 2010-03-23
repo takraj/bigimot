@@ -153,3 +153,25 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Boros
 
   * Elkészíti a szekvencia diagramokat, formázza a dokumentumot.
+
+*Idő:* 2010.03.13. 18:00 - 18:30
+*Résztvevők:* Boros, Takács, Rapp, Molnár
+
+  * *Döntés:* Molnár elkészíti a szkeletont és a futtatással kapcsolatos dokumentációt.
+  * *Döntés:* Rapp elkészíti az értékelést.
+  * *Döntés:* Boros elkészíti a fájllistát.
+
+*Idő:* 2010.03.16. 19:30 - 20:00
+*Résztvevők:* Rapp
+
+  * Elkészíti az értékelést.
+
+*Idő:* 2010.03.16. 19:30 - 02:00
+*Résztvevők:* Molnár
+
+  * Elkészíti szkeletont és a futtatással kapcsolatos dokumentációt.
+
+*Idő:* 2010.03.17. 17:30 - 18:00
+*Résztvevők:* Boros
+
+  * Elkészíti a fájllistát.
