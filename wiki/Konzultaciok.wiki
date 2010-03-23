@@ -213,3 +213,63 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
   * Class Diagram-ban volt egy elvi hiba: nem szabad *változóval* eldönteni, hogy ki micsoda. Függvényt kell írni, és azt felüldefiniálni. Ez az épületek résznél volt.
   * Szekvencia Diagramokból nem derült ki, hogy mi történik kiértékeléskor.
   * 18 pont a 30-ból.
+
+= 5. Konzultáció (2010.03.22., hely: R.4M) =
+
+  * Modell - Szkeleton - *Protó* - Grafikus
+
+== 7-es beadandó ==
+
+=== Protó infói ===
+
+  * A szkeleton kódját kell kibővíteni a program logikájával.
+  * Úgy kell megcsinálni, hogy a grafikus felület elkészítésénél már ehhez a kódhoz nem nyúlhatunk. Mindössze kap egy új osztályt, ami grafikusan jeleníti meg a cuccot.
+  * Nem kell törekedni a jó olvashatóságra, nem fog a programmal senki se játszani. Külön fájlból kell beolvasni, hogy mit csináljon a program. Szal egy szkriptnyelvet kell kitalálni lényegében.
+  * Lehessen a program aktuális állapotáról mentést készíteni, illetve azt be lehessen tölteni.
+  * A program elsődleges kimenete és bemenete fájl legyen.
+  * Írnunk kell tesztelést segítő programokat, amiket most szükséges specifikálni. Ilyen program lehet pl. egy szöveg összehasonlító. (Általában ez elég is.)
+  * *Bemeneti nyelv:* Milyen utasításokat tud értelmezni a program? Nem elég konkrét példán illusztrálni, tökéletes specifikáció kell. Ha kell, használjunk reguláris kifejezéseket.
+  * A tesztre olyan verziót célszerű vinni, ami nem véletlenszerű alapon működik. De vigyük el azt is ami véletlenszerű, hiszen érdekességképp azt is kitesztelhetjük. Nameg, ugye nem nyúlhatunk bele a kód ezen részébe utána. :)
+  * A program továbbra is egyszálú kell legyen.
+
+=== Use-Case ===
+
+  * A felhasználónak milyen lehetőségei vannak a vezérlésre? CSAK EZ!!
+  * Beleértendőek a parancssori paraméterek is, ha vannak.
+
+=== Tesztelési terv ===
+
+  * Milyen teszt esetek vannak? Az összes lehetségest fel kell sorolni!
+
+=== Programok ===
+
+  * Csak specifikáció kell.
+  * Pl.: Kimenetet és várt eredményt összehasonlító szövegfeldolgozó program.
+
+== 8-as beadandó ==
+
+=== 8.1: Osztályok és metódusok ===
+
+  * Ahol vannak nem triviális algoritmusok, ott kell folyamatábra is. Idegen szóval: activity diagram. :)
+
+=== 8.2: Fájlok előállítása ===
+
+  * Szoftver-konfig
+  * Teszt-konfig
+    * Pl. milyen szoftver-konfigot töltsön be? Mennyit lépjen? Mentsen-e?
+  * Várt eredmény
+
+=== 8.3: Tesztprogramok részletes tervei ===
+
+  * Van egy új doksi felrakva ide: http://users.hszk.bme.hu/~nm770
+  * Részletesen leírni a tesztprogramok működését.
+  * Az új mintadoksit felraktam SVN-re is a könnyebb elérhetőség végett.
+
+== Változás a specifikációban ==
+
+  * Felkerült a tárgy honlapjára egy módosítás, miszerint legyen a játékban húsvéti nyuszi, amitől a rabló immunis lesz, ha elüti. (A rendőr nem kaphatja el addig.)
+
+== A szkeleton teszt ==
+
+  * Semmi konkrétumot nem mondtak a mi munkánkról, de annyit megállapítottak, hogy nem sok köze van a doksihoz. :)
+  * A pontokkal majd jövőhéten számolnak el.
