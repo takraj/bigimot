@@ -308,7 +308,7 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
 == Probléma velünk ==
 
   * Nem buktunk meg.
-  * Hol voltatok? Miért voltam egyedül? - TakRaj -
+  * Hol voltatok? Miért voltam egyedül? - {{{TakRaj}}} -
 
   * *5: 20/14*
     * Use-case túl sok, elég lett volna csak a játékos.
