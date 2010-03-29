@@ -175,3 +175,34 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Boros
 
   * Elkészíti a fájllistát.
+
+*Idő:* 2010.03.22. 21:00 - 21:30
+*Résztvevők:* Boros, Takács, Rapp, Molnár
+
+  * *Döntés:* Rapp elkészíti a Tesztelési tervet, a Tesztelést segítő program specifikálását, és a kimeneti nyelv meghatározását.
+  * *Döntés:* Takács elkészíti a Prototípus interfész definícióját a Kimeneti nyelv kivételével, valamint a részletes Use-Case-eket
+
+*Idő:* 2010.03.23. 17:00 - 18:30
+*Résztvevők:* Rapp
+
+  * Elkészíti a Kimeneti nyelvet, és a Tesztelést támogató programok specifikációját.
+
+*Idő:* 2010.03.24. 19:00 - 22:30
+*Résztvevők:* Rapp
+
+  * Elkészíti a Tesztelési tervet.
+
+*Idő:* 2010.03.24. 19:00 - 22:00
+*Résztvevők:* Takács
+
+  * Elkészíti a Prototípus interfész definícióját a Kimeneti nyelv kivételével.
+
+*Idő:* 2010.03.24. 22:00 - 00:00
+*Résztvevők:* Takács
+
+  * Elkészíti a részletes Use-Case-eket.
+
+*Idő:* 2010.03.25. 10:00 - 10:30
+*Résztvevők:* Takács
+
+  * A dokumentum ellenőrzése, helyesírási hibák javítása, formázás.
