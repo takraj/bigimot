@@ -273,3 +273,55 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
 
   * Semmi konkrétumot nem mondtak a mi munkánkról, de annyit megállapítottak, hogy nem sok köze van a doksihoz. :)
   * A pontokkal majd jövőhéten számolnak el.
+
+= 6. Konzultáció (2010.03.29., hely: R.4M) =
+
+  * Április 5-én szünet lesz, viszont Április 19-én ismét mindenkinek kötelező a megjelenés!
+  * Rajmundon kívül senki nem jött el a konzultációra!!!!
+
+== Általános probléma ==
+
+  * Túlságosan összevontuk a lehetséges teszteseteket. Mindenképp bontsuk szét a lehető legelemibb részekre. Pl. ne csak sima ütközésvizsgálat legyen, hanem legyen külön "rendőr vs rabló", "rabló vs civil", stb...
+  * Minden egyes részfunkciót önmagában kell tesztelni, és szépen a legalapvetőbbtől haladni a legösszetettebbekig.
+
+== Megváltozott a specifikáció ==
+
+  * JELEZNI KELL A 8-as DOKSIBAN!!!!!! Csinálni kell egy 8.4-es alfejezetet neki.
+  * Milyen változtatásokra volt szükség az analízis modellben?
+
+== 8-as beadandó ==
+
+  * *8.1:* Prototípus osztályai, metódusai. Ha kell activity diagram (folyamatábra) készítése. Úgy csináljuk meg, hogy ezen már nem nagyon szabad módosítani.
+  * *8.2:* Teszteseteket bőven kifejteni!
+    * Szoftver konfig pl. pályabetöltő szkript.
+    * Teszt konfig pl. a pálya, amit betölt.
+  * *8.3:* Nem jó az excel, totalcommander, stb... használata! Még a C# sem! Java kell!
+  * *8.4:* Mi változott?
+  * Kivételesen küldjük el a konzulensnek a munkánkat e-mailben is, mert nem lesz konzi hétfőn a húsvét miatt.
+
+== 10-es beadandó ==
+
+  * El kell végezni otthon is a teszteket, naplózni a hibákat, majd kijavítani.
+  * Csatolni kell az összehasonlító programot.
+  * A protó 2x annyi meló, mint a szkeleton. Viszont remekül szétdobálható pl. a teszt része.
+
+== Probléma velünk ==
+
+  * Nem buktunk meg.
+  * Hol voltatok? Miért voltam egyedül? - TakRaj -
+
+  * *5: 20/14*
+    * Use-case túl sok, elég lett volna csak a játékos.
+    * Kevés teszteset.
+    * A dialógusok nincsenek fixen felsorolva. Minden lehetséges kimenetet le kellett volna írnunk.
+    * Amúgy a többi korrekt.
+
+  * *6: 20/15, szkeleton: 100/64*
+    * A program jó, de jópár eltérés van a specifikáltakhoz képest.
+    * Próbáljuk ellensúlyozni ezt a %-os megoszlást. 4-en vagyunk, senkinek se menjen 30% fölé a munkarésze, mert akkor a végén előfordulhat, hogy 3-man kaphatunk jegyet, és valaki kibukik, hiába dolgozott.
+
+  * *7: 30/25*
+    * Ezekre a parancsokra nincs szükség: win, loose, bunny, rob, money, health, speed
+    * A kimeneti nyelvet sokkal általánosabban kell specifikálni. Nem elég a példa. Az lényeg, hogy a leírás alapján tudjon a konzulens kreálni egy lehetséges kimenetet.
+    * Bontsuk szét sokkal elemibbre a use-case-eket, mert ez így túl komplex.
+    * EXCEL????? - labvez majdnem hanyattvágta magát, mikor meglátta :D -
