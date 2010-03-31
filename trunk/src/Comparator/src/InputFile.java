@@ -31,7 +31,7 @@ public class InputFile {
 	 * Az osztály konstruktora, bemeneti paramétere a megnyitandó fájl neve.
 	 * 
 	 * @param name A megnyitandó fájl neve, relatív elérési úttal.
-	 * @throws Exception Ha nem találja a fájlt akkor FileNotFoundException.
+	 * @throws Exception
 	 */
 	public InputFile(String name) throws Exception {
 		filename = name;
