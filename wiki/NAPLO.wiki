@@ -206,3 +206,36 @@ Azért kell, mert így ha valaki megcsinál egy részfeladatot, akkor beírhatja
 *Résztvevők:* Takács
 
   * A dokumentum ellenőrzése, helyesírási hibák javítása, formázás.
+
+*Idő:* 2010.03.29. 18:00 - 18:30
+*Résztvevők:* Boros, Takács, Rapp, Molnár
+
+  * *Döntés:* Rapp -> 8.2 (tesztesetek)
+  * *Döntés:* Takács -> 8.3 (tesztelést segítő program)
+  * *Döntés:* Boros -> 8.4 (változás a kódban)
+  * *Döntés:* Molnár -> 8.1 (osztályleírások)
+
+*Idő:* 2010.03.30. 18:00 - 20:00
+*Résztvevők:* Rapp
+
+  * 8.2 elkészítése.
+
+*Idő:* 2010.03.30. 23:00 - 01:00
+*Résztvevők:* Boros
+
+  * 8.4 elkészítése.
+
+*Idő:* 2010.03.31. 17:00 - 21:00
+*Résztvevők:* Rapp
+
+  * 8.2 kiegészítése.
+
+*Idő:* 2010.03.31. 19:00 - 21:00
+*Résztvevők:* Takács
+
+  * 8.3 elkészítése.
+
+*Idő:* 2010.03.31. 20:00 - 22:00
+*Résztvevők:* Molnár
+
+  * 8.1 elkészítése.
