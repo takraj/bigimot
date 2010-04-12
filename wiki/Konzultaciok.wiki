@@ -325,3 +325,37 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
     * A kimeneti nyelvet sokkal általánosabban kell specifikálni. Nem elég a példa. Az lényeg, hogy a leírás alapján tudjon a konzulens kreálni egy lehetséges kimenetet.
     * Bontsuk szét sokkal elemibbre a use-case-eket, mert ez így túl komplex.
     * EXCEL????? - labvez majdnem hanyattvágta magát, mikor meglátta :D -
+
+= 6. Konzultáció (2010.04.12., hely: R.4M) =
+
+  * *Következő alkalommal PROTÓ TESZT! MINDENKINEK KÖTELEZŐ MEGJELENNI!*
+
+== 11.1 Grafikus Interfész ==
+
+  * Paint vagy Visio -val screenshot jellegű képek legyártása.
+  * Hogy fog kinézni?
+  * Meg kell mindent tételesen rajzolni.
+
+== 11.2 Architektúra ==
+
+  * Kell osztálydiagramot is rajzolni a grafikus részekről.
+  * A régiből csak azokat az osztályokat tüntessük fel, melyek kapcsolódnak a grafikus felülethez.
+
+== 11.3 ==
+
+  * *A PROTÓBAN ELKÉSZÍTETT KÓDHOZ NE NYÚLJUNK HOZZÁ!!!!*
+  * Legyen többszálú. A grafikus felület külön szálon fusson.
+  * Kell dupla pufferelés.
+  * Minél egyszerűbb, gagyibb legyen a megjelenítés.
+  * Elég, ha csak különböző nagyságú és színű négyzeteket rajzolunk ki.
+
+== 11.4 ==
+
+  * Szekvencia diagram kell a grafikus felület frissítéséről, újrarajzolásáról.
+
+== Mit alkottunk mi? ==
+
+  * Kellett volna minden metódushoz Activity Diagram.
+  * Kell teszteset az útkereszteződésre, lámpákra, illetve a kocsik pálya szélén való eltüntetésére is.
+  * A metódusok egy jó része nagyon nincs kifejtve. Sokkal részletesebben kell leírni, hogy mi mit csinál, mire való, hogyan használjuk.
+  * *Pontszám: 21/30*
