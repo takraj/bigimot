@@ -330,6 +330,12 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
 
   * *Következő alkalommal PROTÓ TESZT! MINDENKINEK KÖTELEZŐ MEGJELENNI!*
 
+== Az eheti beadandóhoz megjegyzések ==
+
+  * Alá kell most is írni...
+  * Legyen benne hiba, hogy tudjunk mit írni a teszteléshez mikor mi teszteljük.
+  * Ha minden flottul lefut elsőre, akkor az pontlevonás, mert ilyen program nincs. :)
+
 == 11.1 Grafikus Interfész ==
 
   * Paint vagy Visio -val screenshot jellegű képek legyártása.
