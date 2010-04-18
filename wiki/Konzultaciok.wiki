@@ -326,7 +326,7 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
     * Bontsuk szét sokkal elemibbre a use-case-eket, mert ez így túl komplex.
     * EXCEL????? - labvez majdnem hanyattvágta magát, mikor meglátta :D -
 
-= 6. Konzultáció (2010.04.12., hely: R.4M) =
+= 7. Konzultáció (2010.04.12., hely: R.4M) =
 
   * *Következő alkalommal PROTÓ TESZT! MINDENKINEK KÖTELEZŐ MEGJELENNI!*
 
