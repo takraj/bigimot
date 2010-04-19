@@ -365,3 +365,17 @@ Tételesen a feltöltött fájlok, de a javadoc-ot nem kell felsorolni, csak a z
   * Kell teszteset az útkereszteződésre, lámpákra, illetve a kocsik pálya szélén való eltüntetésére is.
   * A metódusok egy jó része nagyon nincs kifejtve. Sokkal részletesebben kell leírni, hogy mi mit csinál, mire való, hogyan használjuk.
   * *Pontszám: 21/30*
+
+= 8. Konzultáció (2010.04.19., hely: R.4M) =
+
+== Ajándék pontok ==
+
+Ha az utolsó leadandót (összefoglalás) időben leadjuk akkor ajándékba kapunk 30 pontot. Megéri...
+
+== Két hét múlva ==
+
+Lesz megint két hét kifejleszteni a grafikus verziót. A teszt ezúttal kevésbé lesz kötött, inkább játszani fogunk a programokkal. Ettől függetlenül gyertek el.
+
+== Protó teszt ==
+
+Úgy tűnik most nem voltak túl nagy fennakadások a protó tesztelése kapcsán, mindössze a Comparator nevű programom (Rajmund) sikerült túl szigorúra. A whitespace karaktereket nem kezelte elég rugalmasan. A késést leszámítva nem volt gond semmiből.
