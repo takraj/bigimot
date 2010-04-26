@@ -379,3 +379,36 @@ Lesz megint két hét kifejleszteni a grafikus verziót. A teszt ezúttal kevés
 == Protó teszt ==
 
 Úgy tűnik most nem voltak túl nagy fennakadások a protó tesztelése kapcsán, mindössze a Comparator nevű programom (Rajmund) sikerült túl szigorúra. A whitespace karaktereket nem kezelte elég rugalmasan. A késést leszámítva nem volt gond semmiből.
+
+= 9. Konzultáció (2010.04.26., hely: R.4M) =
+
+== Általános infók ==
+
+  * Jövőhét csütörtökre grafikus leadása.
+  * Utolsó hétre egy összefoglaló kell, ami ajándék 30 pont, de nem kötelező.
+  * Konzultáció már nem lesz.
+  * Nem is fogjuk tesztelni a grafikust, mindössze jegyosztás lesz, nem kötelező megjelenni.
+  * Reklamációra nincs lehetőség.
+
+== Probélma velünk ==
+
+  * Két exception nem volt lekezelve, ami elég gyakran előjött.
+    * FileNotFound: Amikor pl. nagybetűvel adom meg a fájlnevet.
+    * BadNumericConversion: Amikor egy space rossz helyen van.
+    * Trim() függvény megoldaná a problémát.
+    * A comparátorból is hiányzott a trim(), de ettől eltekintve jól működött.
+  * Nem értük el a 40%-ot a protó részből.
+    * Rettenetes a kód, inkonzisztens a dokumentációval, illetve kezelhetetlen.
+    * Nincs megfelelően ledokumentálva, látszik, hogy összecsapott munka.
+    * Késtünk 3 napot, ez még 30%-ot elvett a megszerzett pontjainkból.
+    * 10 pont.
+
+Megj.: a grafikus specifikációval nem volt különösebb baj, de az egyik szekvencia diagramon fordítva voltak a nyilak. Ezért csak 24 pont a 30-ból.
+
+== Amit tehetünk még ==
+
+Ha a grafikus verziót időre elkészítjük, nem késünk vele, akkor átenged a konzulens, viszont ha nem oké a dolog, akkor hétvégéig küldeni kell neki egy e-mailt, és felbomlasztja a csapatot. Ez nagyjából azt jelenti, hogy berak mindenkit más csapatba, és elszámolunk a munkaórákkal.
+
+Elmondtam neki (Rajmund), hogy mennyire szervezetlenek vagyunk, és hogy mennyire nem működik a belső kommunikáció. Nem örült a dolognak, de mivel már ez az utolsó beadandó, nincs értelme összehívni mindenkit, és így a végére újraszervezni a csapatokat. Ennek ellenére - a konzulens kérésére - le lesz ez a dolog is dokumentálva, viszont ez a jegyet nem befolyásolja.
+
+Sajnálom, hogy így alakult, szerettem volna, ha jól együtt tudunk működni, és mindenki 5-öst kap. Nem rajtam múlt... (Rajmund)
