@@ -4,7 +4,7 @@ import java.awt.event.*;
 @SuppressWarnings("serial")
 public class GameForm extends Frame {
 
-	private int map_size = 225;
+	private int map_size = 25;
 
 	private int display_width = 800;
 	private int display_height = 600;
@@ -89,17 +89,33 @@ public class GameForm extends Frame {
 			temp.SetDrawingArea(dim.width, dim.height);
 
 			buffer.setColor(Color.RED);
-			buffer.fillRect(temp.GetStartX(), temp.GetStartY(), temp.GetEndX()
-					- temp.GetStartX(), temp.GetEndY() - temp.GetStartY());
+			buffer.setStroke(new BasicStroke(5.0f));
+			buffer.drawRect(temp.GetStartX() + 10, temp.GetStartY() + 10, temp
+					.GetEndX()
+					- temp.GetStartX() - 20, temp.GetEndY() - temp.GetStartY()
+					- 20);
 
 			// nyíl
+			buffer.setStroke(new BasicStroke(1.0f));
 			buffer.setColor(Color.darkGray);
-			ArrowDrawer.drawArrow(buffer, temp.GetStartX(), temp.GetStartY(),
-					temp.GetEndX(), temp.GetEndY(), 5f);
+			/* JOBB */
+			ArrowDrawer.drawArrow(buffer, temp.GetEndX() - 10, temp
+					.GetCenterY(), temp.GetEndX() + 10, temp.GetCenterY(), 5f);
+			/* LENT */
+			ArrowDrawer.drawArrow(buffer, temp.GetCenterX(),
+					temp.GetEndY() - 10, temp.GetCenterX(),
+					temp.GetEndY() + 10, 5f);
+			/* FENT */
+			ArrowDrawer.drawArrow(buffer, temp.GetCenterX(),
+					temp.GetStartY() + 10, temp.GetCenterX(),
+					temp.GetStartY() - 10, 5f);
+			/* BAL */
+			ArrowDrawer.drawArrow(buffer, temp.GetStartX() + 10, temp
+					.GetCenterY(), temp.GetStartX() - 10, temp.GetCenterY(), 5f);
 
 			// keret rajzolása
 
-			buffer.setStroke(new BasicStroke(7.0f));
+			buffer.setStroke(new BasicStroke(5.0f));
 			buffer.setColor(Color.BLUE);
 			buffer.drawRect(0, 0, dim.width - 1, dim.height - 1);
 
