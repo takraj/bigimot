@@ -1,11 +1,12 @@
 
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.Random;
 
 public class Car {
 
+	private ElementView view;
+	
 	protected int time;
 	protected int speed;
 	protected int timetomove;
@@ -65,6 +66,8 @@ public class Car {
 	public void settimetomove(TrafficTable t){timetomove=1;}
 	public void step()
 	{
+		System.out.println("CAR-STEP()");
+		
 		time--;
 		if (time==0)
 		{
@@ -128,6 +131,18 @@ public class Car {
 	public void destroy() {
 		rb.setCar(null);
 		this.rb=null;
+	}
+	
+	public void SetView(ElementView v){
+		view = v;
+	}
+	
+	public ElementView GetView(){
+		return view;
+	}
+	
+	public String WhoAmI(){
+		return "Car";
 	}
 
 }

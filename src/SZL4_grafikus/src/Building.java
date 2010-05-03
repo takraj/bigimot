@@ -2,6 +2,8 @@ import java.io.BufferedWriter;
 
 
 public class Building {
+	
+	private ElementView view;
 
 	/**
 	 * Az osztály felel majd az épületekért
@@ -14,4 +16,16 @@ public class Building {
 	public void getRole(Car c) {
 	}
 	public void save(BufferedWriter out){};
+	
+	public void SetView(ElementView v){
+		view = v;
+	}
+	
+	public ElementView GetView(){
+		return view;
+	}
+	
+	public String WhoAmI(){
+		return "Building";
+	}
 }

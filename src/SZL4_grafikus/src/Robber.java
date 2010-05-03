@@ -1,6 +1,5 @@
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 
 public class Robber extends Car {
 
@@ -109,4 +108,9 @@ public class Robber extends Car {
 		System.exit(0);
 	}
 	public void immortal() {immortality=10;}
+	
+	@Override
+	public String WhoAmI(){
+		return "Robber";
+	}
 }

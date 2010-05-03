@@ -1,6 +1,5 @@
 import java.io.BufferedWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 
 public class Police extends Car {
 
@@ -96,6 +95,11 @@ public class Police extends Car {
 			}
 			else timetomove--;
 		}
+	}
+	
+	@Override
+	public String WhoAmI(){
+		return "Police";
 	}
 
 }

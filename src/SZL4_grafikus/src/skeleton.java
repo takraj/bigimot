@@ -1,7 +1,9 @@
-import java.io.IOException;
+//import java.io.IOException;
 
 
 public class skeleton {
+	
+	/*
 	
 	public skeleton()
 	{
@@ -34,5 +36,5 @@ public class skeleton {
 		
 		System.out.println("skeleton()-End");
 	}
-	
+	*/
 }

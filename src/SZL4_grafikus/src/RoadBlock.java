@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class RoadBlock {
 
@@ -8,14 +7,24 @@ public class RoadBlock {
 	private Building building;
 	private RoadBlock[] road;
 	private RoadBlock[] prev;
-	private int traf;
+	private ElementView view;
+	//private int traf;
 	public int used;
+	
+	public void SetView(ElementView v){
+		view = v;
+	}
+	
+	public ElementView GetView(){
+		return view;
+	}
+	
 	/**
 	 * RoadBlock konstruktora
 	 */
 	public RoadBlock()
 	{
-		traf=0;
+		//traf=0;
 		road=new RoadBlock[4];
 		prev=new RoadBlock[4];
 		for(int i=0; i<4; i++) road[i]=prev[i]=null;
@@ -36,6 +45,10 @@ public class RoadBlock {
 
 	public void setNeighbour(RoadBlock rb, int i) {
 		road[i]=rb;
+	}
+	
+	public RoadBlock GetNeighbour(int i){
+		return road[i];
 	}
 
 	/**
