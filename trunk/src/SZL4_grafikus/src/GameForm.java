@@ -4,14 +4,15 @@ import java.awt.event.*;
 @SuppressWarnings("serial")
 public class GameForm extends Frame {
 
-	private int map_size = 25;
+	private int map_size;
 
 	private int display_width = 800;
 	private int display_height = 600;
 
 	private Integer known_score = 0;
 	private Integer known_health = 0;
-	// legyen még egy referencia a konstruktorban kapott Game objektumra!
+
+	City city_reference; // referencia a városra
 
 	private Panel menuPanel = new Panel();
 	private Panel statusPanel = new Panel();
@@ -30,28 +31,24 @@ public class GameForm extends Frame {
 		}
 	}
 
-	DrawingCoords temp = new DrawingCoords(map_size, 0);
-
 	class GameFormKeyManager extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			if (e.getKeyCode() == KeyEvent.VK_UP) {
 				// todo
-				temp.StepY(-1);
+				city_reference.step();
+				UpdateViews();
 				Draw();
 			}
 			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 				// todo
-				temp.StepY(1);
 				Draw();
 			}
 			if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 				// todo
-				temp.StepX(-1);
 				Draw();
 			}
 			if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 				// todo
-				temp.StepX(1);
 				Draw();
 			}
 			// System.out.printf("X=%d, Y=%d\n",temp.GetX(),temp.GetY());
@@ -84,34 +81,13 @@ public class GameForm extends Frame {
 
 			// 04 - ÚJ GRAFIKA ELKÉSZÍTÉSE
 
-			// négyzet rajzolása
-
-			temp.SetDrawingArea(dim.width, dim.height);
-
-			buffer.setColor(Color.RED);
-			buffer.setStroke(new BasicStroke(5.0f));
-			buffer.drawRect(temp.GetStartX() + 10, temp.GetStartY() + 10, temp
-					.GetEndX()
-					- temp.GetStartX() - 20, temp.GetEndY() - temp.GetStartY()
-					- 20);
-
-			// nyíl
-			buffer.setStroke(new BasicStroke(1.0f));
-			buffer.setColor(Color.darkGray);
-			/* JOBB */
-			ArrowDrawer.drawArrow(buffer, temp.GetEndX() - 10, temp
-					.GetCenterY(), temp.GetEndX() + 10, temp.GetCenterY(), 5f);
-			/* LENT */
-			ArrowDrawer.drawArrow(buffer, temp.GetCenterX(),
-					temp.GetEndY() - 10, temp.GetCenterX(),
-					temp.GetEndY() + 10, 5f);
-			/* FENT */
-			ArrowDrawer.drawArrow(buffer, temp.GetCenterX(),
-					temp.GetStartY() + 10, temp.GetCenterX(),
-					temp.GetStartY() - 10, 5f);
-			/* BAL */
-			ArrowDrawer.drawArrow(buffer, temp.GetStartX() + 10, temp
-					.GetCenterY(), temp.GetStartX() - 10, temp.GetCenterY(), 5f);
+			for (int i = 0; i<city_reference.GetSize(); i++){
+				RoadBlock rb = city_reference.GetRBAt(i);
+				if (rb != null){
+					ElementView v = rb.GetView();
+					if (v != null) v.Draw(buffer, map_size, i);
+				}
+			}
 
 			// keret rajzolása
 
@@ -129,8 +105,70 @@ public class GameForm extends Frame {
 		}
 	}
 
-	public GameForm(String name) { // neki legyen még egy Game paramétere!
+	public void SetViews(){
+		for (int i = 0; i<city_reference.GetSize(); i++){
+			RoadBlock rb = city_reference.GetRBAt(i);
+			if (rb != null){
+				rb.SetView(new GRoadBlock(rb, display_height, display_width));
+				
+				Building b = rb.getBuilding();
+				if (b != null){
+					if (b.WhoAmI().compareToIgnoreCase("Building") == 0)
+						b.SetView(new GBuilding(b, display_height, display_width));
+					if (b.WhoAmI().compareToIgnoreCase("Bank") == 0)
+						b.SetView(new GBank(b, display_height, display_width));
+					if (b.WhoAmI().compareToIgnoreCase("Hideout") == 0)
+						b.SetView(new GHideout(b, display_height, display_width));
+				}
+				
+				ITraffic t = rb.getTraffic();
+				if (t != null){
+					if (t.WhoAmI().compareToIgnoreCase("TrafficTable") == 0)
+						t.SetView(new GTrafficTable(t, display_height, display_width));
+					if (t.WhoAmI().compareToIgnoreCase("TrafficSign") == 0)
+						t.SetView(new GTrafficSign(t, display_height, display_width));
+				}
+				
+				Car c = rb.getCar();
+				if (c != null){
+					if (c.WhoAmI().compareToIgnoreCase("Car") == 0)
+						c.SetView(new GCar(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Robber") == 0)
+						c.SetView(new GRobber(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Police") == 0)
+						c.SetView(new GPolice(c, display_height, display_width));
+				}
+			}
+		}
+	}
+	
+	public void UpdateViews(){
+		for (int i = 0; i<city_reference.GetSize(); i++){
+			RoadBlock rb = city_reference.GetRBAt(i);
+			if (rb != null){
+				Car c = rb.getCar();
+				if (c != null){
+					if (c.WhoAmI().compareToIgnoreCase("Car") == 0)
+						c.SetView(new GCar(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Robber") == 0)
+						c.SetView(new GRobber(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Police") == 0)
+						c.SetView(new GPolice(c, display_height, display_width));
+				}
+			}
+		}
+	}
+	
+	public GameForm(String name, City c) {
 		super(name);
+
+		// referálás a városra
+
+		city_reference = c;
+		map_size = city_reference.GetSize();
+		SetViews();
+
+		// layout beállítása
 
 		setLayout(new BorderLayout());
 		Button controlBtn = new Button("Control");
@@ -154,6 +192,13 @@ public class GameForm extends Frame {
 		addWindowListener(new GameFormWindowCloser());
 		controlBtn.addKeyListener(new GameFormKeyManager());
 		// todo: menügombok eseményei
+
+		// megjelenítés
+
+		pack();
+		setResizable(false);
+		Draw();
+		setVisible(true);
 	}
 
 	public void Draw() {

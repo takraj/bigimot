@@ -22,5 +22,10 @@ public class Hideout extends Building {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-}
+	}
+	
+	@Override
+	public String WhoAmI(){
+		return "Hideout";
+	}
 }

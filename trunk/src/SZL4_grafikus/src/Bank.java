@@ -24,5 +24,10 @@ public class Bank extends Building {
 			e.printStackTrace();
 		}
 	}
+	
+	@Override
+	public String WhoAmI(){
+		return "Bank";
+	}
 
 }

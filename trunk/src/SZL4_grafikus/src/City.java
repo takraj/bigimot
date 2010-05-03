@@ -1,6 +1,3 @@
-
-import java.lang.*;
-import java.util.*;
 import java.io.*;
 
 
@@ -9,39 +6,46 @@ public class City {
 	public Car[] car;
 	//private LinkedList<RoadBlock> road;
 	private ITraffic[] traffic;
-	private Building[] building;
+	//private Building[] building;
 	
 	private RoadBlock[] road;
 	Building h;
 	int rsize, tsize, bsize, csize;
 	
+	public int GetSize(){
+		return rsize;
+	}
+	
+	public RoadBlock GetRBAt(int i){
+		return road[i];
+	}
+	
+	public Building GetHideout(){
+		return h;
+	}
+	
 	/**
 	 * City konstruktora, ez hozza létre a RoadBlockokat, hideoutot, és a Car-okat
+	 * n: oszlopok/sorok száma
 	 */
-	public City(String[] map, int n, int cs){
+	public City(String[] map, int n){
 		road=new RoadBlock[n*n];
 		for(int i=0;i<n*n;i++) road[i]=new RoadBlock();
 		traffic=new ITraffic[10];
-		building= new Building[10];
+		//building= new Building[10];
 		rsize=n*n;
 		tsize=bsize=0;
 		csize=0;
 		car=new Car[20];
 		char c;
-		/*
-		csize=3;
-		car=new Car[20];
-		car[0]=new Robber(road[0],1);
-		road[0].setCar(car[0]);
-		car[1]=new Car(road[3],4);
-		road[3].setCar(car[1]);
-		car[2]=new Car(road[5],4);
-		road[5].setCar(car[2]);*/
+		
 		for(int i=0;i<n*n;i++){
 			for(int j=0;j<n*n;j++){
 				c=map[i].charAt(j);
 				switch (c){
 				case 'b':
+				case 'B':
+					road[i].setBuilding(new Bank(road[i]));
 					break;
 				case 'h':
 				case 'H':
@@ -65,7 +69,7 @@ public class City {
 					break;
 				case '1':
 					road[i].used=1;
-					//fel 0 bal 1 jobb 2 le 3
+					// fel=0, bal=2, jobb=1, le=3
 					if(j==i-3){
 						road[i].setNeighbour(road[j], 0);
 						road[j].setPrev(road[i], 3);
@@ -106,12 +110,7 @@ public class City {
 		csize++;
 	}
 	
-	public City()
-	{
-		System.out.println("City()-Begin");
-		
- 	}
-	
+	/* MOST NEM HASZNÁLJUK
 	public void mutassad(){
 		int i;
 		RoadBlock[] r2 = new RoadBlock[4];
@@ -127,7 +126,7 @@ public class City {
 			else System.out.println("szomszed");
 				
 		}
-	}
+	}*/
 	
 	public void save(BufferedWriter out){
 		try {
@@ -161,7 +160,7 @@ public class City {
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Write error.");
 		}
 	}
 	
@@ -183,8 +182,12 @@ public class City {
 		
 		for(int i=0;i<csize;i++) car[i].step();
 		for(int i=0;i<tsize;i++) traffic[i].step();
-		/*System.out.println("City.step()-Begin");
+		
+		/* debug kód */
+		// System.out.println("City.step()");
+		/* debug kód */
 
+		/* EZ MI???
 		int temp;
 		System.out.println("Mi mozdul? 0:Car 1:Police 2:Robber");
 		try
@@ -208,9 +211,8 @@ public class City {
 		catch(IOException e)
 		{
 			System.out.println("Hibás bemenet");			
-		}	
-
-		System.out.println("City.step()-End");*/
+		} */
+		
 	}
 
 }

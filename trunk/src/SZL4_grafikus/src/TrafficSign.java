@@ -4,6 +4,7 @@ import java.io.IOException;
 public class TrafficSign implements ITraffic {
 
 	private int state;
+	private ElementView view;
 	
 	public TrafficSign()
 	{
@@ -33,5 +34,20 @@ public class TrafficSign implements ITraffic {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void SetView(ElementView v){
+		view = v;
+	}
+	
+	@Override
+	public ElementView GetView(){
+		return view;
+	}
+	
+	@Override
+	public String WhoAmI(){
+		return "TrafficSign";
 	}
 }
