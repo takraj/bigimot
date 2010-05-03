@@ -62,4 +62,12 @@ public class DrawingCoords {
 		// Y pozíció * (rajzmagasság+1 / sqrt(map_size))
 		return (int) (GetY() * ((drawing_height + 1) / Math.sqrt(map_size)));
 	}
+	
+	public int GetCenterX(){
+		return (GetStartX() + GetEndX()) / 2;
+	}
+	
+	public int GetCenterY(){
+		return (GetStartY() + GetEndY()) / 2;
+	}
 }
