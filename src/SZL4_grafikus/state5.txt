@@ -1,0 +1,16 @@
+OBJECT car[0] TYPE Robber
+speed 1
+timetomove 5
+health 5
+OBJECT car[1] TYPE Police
+speed 2
+timetomove 5
+OBJECT car[2] TYPE Bunny
+speed 0
+timetomove 10
+OBJECT road[3] TYPE RoadBlock
+car car[0]
+OBJECT road[2] TYPE RoadBlock
+car car[1]
+OBJECt road[4] TYPE RoadBlock
+car car[2]
