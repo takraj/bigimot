@@ -8,7 +8,7 @@ public class TrafficSign implements ITraffic {
 	
 	public TrafficSign()
 	{
-		state=0;
+		state = 0;
 	}
 	
 	@Override
@@ -22,9 +22,14 @@ public class TrafficSign implements ITraffic {
 		if(state==0) state++; else state--; //változtatja az állapotát
 	}
 
+	@Override
 	public int getstate()
 	{
 		return state;
+	}
+	
+	public void SetState(int s){
+		state = s;
 	}
 	
 	public void save(BufferedWriter out){
@@ -49,5 +54,14 @@ public class TrafficSign implements ITraffic {
 	@Override
 	public String WhoAmI(){
 		return "TrafficSign";
+	}
+	
+	@Override
+	public String toString(){
+		String result = "";
+		
+		result += String.format("\nstate %d", state);
+		
+		return result;
 	}
 }

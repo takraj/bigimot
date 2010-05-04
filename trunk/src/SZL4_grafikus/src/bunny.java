@@ -72,6 +72,11 @@ public class bunny extends Car {
 			else timetomove=0;
 		}
 	}
+	
+	@Override
+	public String WhoAmI(){
+		return "Bunny";
+	}
 
 }
 

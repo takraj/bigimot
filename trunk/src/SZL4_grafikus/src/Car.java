@@ -6,16 +6,27 @@ import java.util.Random;
 public class Car {
 
 	private ElementView view;
+	private int my_index = 0;
 	
 	protected int time;
 	protected int speed;
 	protected int timetomove;
+	protected int health;
 	protected RoadBlock rb;
-	Random irand;
+	Random irand = new Random();
 	public void setirany(int i){};
+	
+	public void setIndex(int i){
+		my_index = i;
+	}
+	
 	public Car()
 	{
 		timetomove=0;
+		rb = null;
+		speed = irand.nextInt(10)+1;
+		health = 100;
+		time = speed;
 	}
 	
 	/**
@@ -27,8 +38,9 @@ public class Car {
 		timetomove=0;
 		rb=keeper;
 		keeper.setCar(this); //itt rendeli hozzá magát a felelõs roadblockhoz
-		speed=irand.nextInt(2)+1;
+		speed=irand.nextInt(10)+1;
 		time=speed;
+		health = 100;
 	}
 	public Car(RoadBlock keeper, int s)
 	{
@@ -36,7 +48,8 @@ public class Car {
 		rb=keeper;
 		keeper.setCar(this); //itt rendeli hozzá magát a felelõs roadblockhoz
 		speed=s;
-		time=speed;	
+		time=speed;
+		health = 100;
 	}
 	
 	
@@ -66,7 +79,6 @@ public class Car {
 	public void settimetomove(TrafficTable t){timetomove=1;}
 	public void step()
 	{
-		System.out.println("CAR-STEP()");
 		
 		time--;
 		if (time==0)
@@ -143,6 +155,37 @@ public class Car {
 	
 	public String WhoAmI(){
 		return "Car";
+	}
+	
+	public void SetRB(RoadBlock r){
+		rb = r;
+	}
+	
+	public void SetSpeed(int s){
+		time = speed = s;
+	}
+	
+	public void SetTimeToMove(int ttm){
+		timetomove = ttm;
+	}
+	
+	public void SetHealth(int hp){
+		health = hp;
+	}
+	
+	@Override
+	public String toString(){
+		String result = "";
+		
+		result += String.format("\nspeed %d", speed);
+		result += String.format("\nhealth %d", health);
+		result += String.format("\ntimetomove %d", timetomove);
+		
+		return result;
+	}
+	
+	public int getIndex(){
+		return my_index;
 	}
 
 }

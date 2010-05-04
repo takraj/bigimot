@@ -137,6 +137,8 @@ public class GameForm extends Frame {
 						c.SetView(new GRobber(c, display_height, display_width));
 					if (c.WhoAmI().compareToIgnoreCase("Police") == 0)
 						c.SetView(new GPolice(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Bunny") == 0)
+						c.SetView(new GBunny(c, display_height, display_width));
 				}
 			}
 		}
@@ -154,6 +156,8 @@ public class GameForm extends Frame {
 						c.SetView(new GRobber(c, display_height, display_width));
 					if (c.WhoAmI().compareToIgnoreCase("Police") == 0)
 						c.SetView(new GPolice(c, display_height, display_width));
+					if (c.WhoAmI().compareToIgnoreCase("Bunny") == 0)
+						c.SetView(new GBunny(c, display_height, display_width));
 				}
 			}
 		}

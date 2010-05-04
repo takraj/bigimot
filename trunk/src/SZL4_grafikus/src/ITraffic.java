@@ -14,5 +14,7 @@ public interface ITraffic {
 	public ElementView GetView();
 	
 	public String WhoAmI();
+	public int getstate();
+	public void SetState(int s);
 
 }

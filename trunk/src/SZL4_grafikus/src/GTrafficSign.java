@@ -5,12 +5,12 @@ import java.awt.Graphics2D;
 
 public class GTrafficSign implements ElementView {
 	
-	TrafficSign host = null;
+	ITraffic host = null;
 	int height = 0;
 	int width = 0;
 	
 	public GTrafficSign(ITraffic h, int canvas_h, int canvas_w){
-		host = (TrafficSign)h;
+		host = h;
 		height = canvas_h;
 		width = canvas_w;
 	}
