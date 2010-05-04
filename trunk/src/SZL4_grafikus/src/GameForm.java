@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 @SuppressWarnings("serial")
-public class GameForm extends Frame {
+public class GameForm extends Frame implements View {
 
 	private int map_size;
 
@@ -24,6 +24,29 @@ public class GameForm extends Frame {
 
 	private Label scoreLabel = new Label(known_score.toString());
 	private Label healthLabel = new Label(known_health.toString());
+	
+	public boolean PrintMessage(String s){
+		boolean result = false;
+		
+		GMessage message = new GMessage(this, s);
+		if (message != null){
+			result = message.isOk;
+			message.dispose();
+		}
+		
+		return result;
+	}
+	
+	public String AskFor(String s){
+		String result = "";
+		
+			GTextInput input = new GTextInput(this, s);
+			if ((input != null) && (input.isOk)){
+				result = input.GetText();
+				input.dispose();
+			}
+			return result;
+	}
 
 	class GameFormWindowCloser extends WindowAdapter {
 		public void windowClosing(WindowEvent e) {
@@ -34,24 +57,17 @@ public class GameForm extends Frame {
 	class GameFormKeyManager extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			if (e.getKeyCode() == KeyEvent.VK_UP) {
-				// todo
-				city_reference.step();
-				UpdateViews();
-				Draw();
+				city_reference.GetRobber().setirany(0);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-				// todo
-				Draw();
+				city_reference.GetRobber().setirany(3);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-				// todo
-				Draw();
+				city_reference.GetRobber().setirany(1);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-				// todo
-				Draw();
+				city_reference.GetRobber().setirany(2);
 			}
-			// System.out.printf("X=%d, Y=%d\n",temp.GetX(),temp.GetY());
 		}
 	}
 
@@ -68,11 +84,15 @@ public class GameForm extends Frame {
 
 			// 02 - STÁTUSZ FRISSÍTÉSE
 
-			if (known_score != 0) {
-				SetScore(0);
-			}
-			if (known_health != 0) {
-				SetHealth(0);
+			Robber robber = city_reference.GetRobber();
+			
+			if (robber != null){
+				if (known_score != robber.GetScore()) {
+					SetScore(robber.GetScore());
+				}
+				if (known_health != robber.GetHealth()) {
+					SetHealth(robber.GetHealth());
+				}
 			}
 
 			// 03 - KÉPERNYÕ TÖRLÉSE

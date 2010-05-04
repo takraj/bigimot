@@ -1,4 +1,3 @@
-import java.io.*;
 
 public class RoadBlock {
 
@@ -110,29 +109,6 @@ public class RoadBlock {
 
 	public ITraffic getTraffic() {
 		return traffic;
-	}
-
-	public void save(BufferedWriter out){
-			try {
-				if(traffic!=null){
-					out.write("Traffic ");
-					traffic.save(out);
-					out.newLine();
-				}
-				if(building!=null){
-					out.write("Building ");
-					building.save(out);					
-					out.newLine();
-				}
-				if(car!=null){
-					out.write("Car ");
-					car.save(out);
-					out.newLine();
-				}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 	}
 	
 	@Override

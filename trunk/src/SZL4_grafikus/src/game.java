@@ -1,16 +1,11 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.Writer;
-import java.util.Scanner;
+import java.io.*;
 import java.util.*;
 
 
 public class game {
 	
 	private static City city = null;
-	private static GameForm view;
+	private static View view;
 	
 	public static City LoadMap(String file){
 		int n;
@@ -20,7 +15,7 @@ public class game {
 		try {
 			sc = new Scanner(new File(file));
 		} catch (FileNotFoundException e) {
-			System.out.printf("Cannot find file: %s\n",file);
+			PrintMessage("Cannot find file: "+file);
 			System.exit(-1);
 		}
         
@@ -38,6 +33,8 @@ public class game {
 	}
 	
 	public static void LoadState(String file, City city){
+		if (city == null) return;
+		
 		Scanner sc = null;
 		String actLine = "";
 		String[] parts = null;
@@ -49,7 +46,7 @@ public class game {
 		try {
 			sc = new Scanner(new File(file));
 		} catch (FileNotFoundException e) {
-			System.out.printf("Cannot find file: %s\n",file);
+			PrintMessage("Cannot find file: "+file);
 			System.exit(-1);
 		}
 		
@@ -135,6 +132,8 @@ public class game {
 	}
 	
 	public static void SaveState(String file, City city){
+		if (city == null) return;
+		
 		String result = "";
 		
 		// autók mentése
@@ -169,14 +168,14 @@ public class game {
 			f = new File(file);
 			output = new BufferedWriter(new FileWriter(f));
 		} catch (Exception e) {
-			System.out.println("Cannot create save file.");
+			PrintMessage("Cannot create save file.");
 			return;
 		}
 		
 		try {
 			output.write(result);
 		} catch (Exception e){
-			System.out.println("Write error.");
+			PrintMessage("Write error.");
 		} finally {
 			try {
 				output.close();
@@ -203,13 +202,18 @@ public class game {
 		if (view != null) view.dispose();
 		view = new GameForm("BIGIMOT, SZOFTVER LABOR 4", city);
         view.Draw();
+        
+        CreateTimer(1000, city, view);
 	}
 	
 	public static void SaveGame(String file){
 		SaveState(file, city);
 	}
 	
-	public static void CreateTimer(int interval, final City c, final GameForm v){
+	public static void CreateTimer(int interval, final City c, final View v){
+		if (c == null) return;
+		if (v == null) return;
+		
 		int delay = 1000;
 		int period = interval;
 		
@@ -223,9 +227,55 @@ public class game {
 			} }, delay, period); 
 	}
 	
+	public static boolean PrintMessage(String s){
+		if (view != null){
+			return view.PrintMessage(s);
+		}
+		else {
+			System.out.println(s);
+			return true;
+		}
+	}
+	
+	public static String AskFor(String s){		
+		if (view != null){
+			return view.AskFor(s);
+		}
+		else {
+			try {
+				BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+				String str = "";
+				System.out.println(s);
+				str = in.readLine();
+				return str;
+			} catch (IOException e) {
+				System.out.println("IO Error.");
+				return "";
+			} 
+		}
+	}
+	
 	public static void main(String args[])
 	{
-		LoadGame("mapfile.txt","state3.txt");
+		/*
+		 * Gábor!
+		 * 
+		 * Ez a rész még itt ár lesz írva bõven.
+		 * Meg fog jelenni egy dialógusablak, 2 választási lehetõséggel:
+		 *   - New Game - Load Game -
+		 * 
+		 * Amit még tervezek: - Menni fognak természetesen a gombok a képernyõn.
+		 *                    - Lesz nyuszifeltûnés.
+		 *                    - Lesz egy 9x9-es térkép, amiben nincsenek zsákutcák.
+		 *                    - Lesz automatikus autó be-, és kiléptetés.
+		 * 
+		 * Ettõl függetlenül csináld meg a doksit arról ami eddig elkészült,
+		 * mert akkor csak a módosításokat kell majd beleírnod ami ~20 perc.
+		 * 
+		 * Üdv. TakRaj
+		 */
+		
+		LoadGame(AskFor("Map file:"),AskFor("State file:"));
 	}
 
 }

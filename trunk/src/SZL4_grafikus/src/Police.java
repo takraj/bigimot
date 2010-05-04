@@ -64,16 +64,22 @@ public class Police extends Car {
 			if(timetomove==0)
 			{
 				RoadBlock destination;
-				RoadBlock[] destlist=rb.getNeighbour(); 
-				int temp;
-				temp=0;
+				RoadBlock[] destlist=rb.getNeighbour();
 				destination=null;
-				while((destination==null)&&(temp<=3))
+
+				while (destination==null)
 				{
-					destination=destlist[temp];
-					temp++;
+					if ((destlist[0] != null) || (destlist[1] != null) || (destlist[2] != null) || (destlist[3] != null)){
+						int[] temp = Randomizer.CreatePermutation(4);
+						for (int f = 0; f<=3; f++){
+							if (destlist[temp[f]] != null){
+								destination = destlist[temp[f]];
+								break;
+							}
+						}
+					}
+					else return;
 				}
-				if ((temp>3)&&(destination==null)) return;
 		
 				Car elozendo = destination.getCar(); //megtudja milyen autó van (ha van) a cél RoadBlockon
 				if (elozendo==null) //ha nincs autó halad tovább

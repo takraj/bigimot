@@ -1,6 +1,4 @@
 
-import java.io.BufferedWriter;
-import java.io.IOException;
 import java.util.Random;
 
 public class Car {
@@ -61,15 +59,6 @@ public class Car {
 	public void move(Car c) {
 		c.pass(this); // Azonosítja magát a megelõzendõ kocsi
 	}
-
-	public void save(BufferedWriter out){
-		try {
-			out.write(" car speed="+speed);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 	/**
 	 * A léptetésért felelõs függvény
@@ -87,16 +76,21 @@ public class Car {
 			if(timetomove==0)
 			{
 				RoadBlock destination;
-				RoadBlock[] destlist=rb.getNeighbour(); 
-				int temp;
-				temp=0;
+				RoadBlock[] destlist=rb.getNeighbour();
 				destination=null;
-				while((destination==null)&&(temp<=3))
+				while (destination==null)
 				{
-					destination=destlist[temp];
-					temp++;
+					if ((destlist[0] != null) || (destlist[1] != null) || (destlist[2] != null) || (destlist[3] != null)){
+						int[] temp = Randomizer.CreatePermutation(4);
+						for (int f = 0; f<=3; f++){
+							if (destlist[temp[f]] != null){
+								destination = destlist[temp[f]];
+								break;
+							}
+						}
+					}
+					else return;
 				}
-				if ((temp>3)&&(destination==null)) return;
 		
 				Car elozendo = destination.getCar(); //megtudja milyen autó van (ha van) a cél RoadBlockon
 				if (elozendo==null) //ha nincs autó halad tovább
