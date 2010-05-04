@@ -40,5 +40,20 @@ public class TrafficTable implements ITraffic {
 	public String WhoAmI(){
 		return "TrafficTable";
 	}
+	@Override
+	public void SetState(int s) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int getstate() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+	
+	@Override
+	public String toString(){
+		return "";
+	}
 
 }

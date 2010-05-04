@@ -12,7 +12,11 @@ public class RoadBlock {
 	public int used;
 	
 	public void SetView(ElementView v){
-		view = v;
+		// ha zombi, akkor ne legyen neki megjelenítése
+		
+		if (((road[0] != null) || (road[1] != null) || (road[2] != null) || (road[3] != null))
+				|| ((prev[0] != null) || (prev[1] != null) || (prev[2] != null) || (prev[3] != null)))
+			view = v;
 	}
 	
 	public ElementView GetView(){
@@ -129,6 +133,17 @@ public class RoadBlock {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+	}
+	
+	@Override
+	public String toString(){
+		String result = "";
+		
+		if (car != null){
+			result += String.format("\ncar car[%d]", car.getIndex());
+		}
+		
+		return result;
 	}
 
 }
