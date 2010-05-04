@@ -1,5 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.IOException;
 
 public class Robber extends Car {
 
@@ -8,6 +6,16 @@ public class Robber extends Car {
 	 */
 	private int irany;
 	private int immortality;
+	
+	private int score = 0;
+	
+	public int GetScore(){
+		return score;
+	}
+	
+	public int GetHealth(){
+		return health;
+	}
 
 	public Robber() {
 		super();
@@ -19,7 +27,14 @@ public class Robber extends Car {
 		super(keeper, s);
 	}
 	
-	public void setirany(int i){if ((i<0)||(i>3)) irany=0; else irany=i; }
+	public void setirany(int i){
+		if ((i<0)||(i>3)) {
+			irany=0;
+		} else {
+			if ((irany == i) && (speed > 1)) speed--;
+			irany=i;
+		}
+	}
 
 	/**
 	 * Ha rendõrt akart elõzni a játék vége
@@ -29,15 +44,6 @@ public class Robber extends Car {
 	}	
 	public void pass(bunny b) {
 			immortal();
-	}
-	
-	public void save(BufferedWriter out){
-		try {
-			out.write(" robber speed="+speed);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	/**
@@ -104,7 +110,7 @@ public class Robber extends Car {
 		
 	public void AtBuilding(Hideout h)
 	{
-		System.out.println("Nyertél - Game Over");
+		game.PrintMessage("Nyertél - Game Over");
 		System.exit(0);
 	}
 	public void immortal() {immortality=10;}

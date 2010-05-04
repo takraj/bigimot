@@ -1,8 +1,6 @@
-import java.io.*;
-
 
 public class City {
-
+	
 	public Car[] car;
 	private ITraffic[] traffic;
 	
@@ -28,6 +26,14 @@ public class City {
 	
 	public Building GetHideout(){
 		return h;
+	}
+	
+	public Robber GetRobber(){
+		for (int i=0; i<csize; i++){
+			if ((car[i] != null) && (car[i].WhoAmI() == "Robber"))
+				return (Robber)car[i];
+		}
+		return null;
 	}
 	
 	/**
@@ -123,42 +129,6 @@ public class City {
 		
 		road[i].setCar(car[csize]);
 		csize++;
-	}
-	
-	public void save(BufferedWriter out){
-		try {
-			out.write("OBJECT city TYPE City");
-			out.newLine();
-			
-			for(int i=0;i<rsize;i++){
-				if(road[i].used==1){
-					out.write("road["+i+"] ");
-					out.newLine();
-				}
-			}
-			for(int i=0;i<tsize;i++){
-				out.write("traffic["+i+"] ");
-				out.newLine();
-			}
-			for(int i=0;i<bsize;i++){
-				out.write("building["+i+"] ");
-				out.newLine();
-			}
-			for(int i=0;i<csize;i++){
-				out.write("car["+i+"] ");
-				out.newLine();
-			}
-			for(int i=0;i<rsize;i++){
-				if(road[i].used==1){
-					out.write("OBJECT road["+i+"] TYPE RoadBlock");
-					out.newLine();
-					road[i].save(out);
-				}
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Write error.");
-		}
 	}
 	
 	/**
