@@ -1,0 +1,7 @@
+OBJECT car[0] TYPE Car
+speed 10
+timetomove 5
+OBJECT road[2] TYPE RoadBlock
+car car[0]
+OBJECT traffic[0] TYPE TrafficSign
+state 0

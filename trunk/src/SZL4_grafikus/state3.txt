@@ -1,0 +1,10 @@
+OBJECT car[0] TYPE Car
+speed 1
+timetomove 5
+OBJECT car[1] TYPE Car
+speed 3
+timetomove 5
+OBJECT road[3] TYPE RoadBlock
+car car[0]
+OBJECT road[2] TYPE RoadBlock
+car car[1]
