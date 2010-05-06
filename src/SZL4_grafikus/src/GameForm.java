@@ -53,20 +53,69 @@ public class GameForm extends Frame implements View {
 			System.exit(0);
 		}
 	}
+	
+	class GameFormNewGameBtn implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			String map = game.AskFor("Map file:");
+        	if (map != ""){
+        		setVisible(false);
+        		game.NewGame(map);
+        	}
+		}
+		
+	}
+	
+	class GameFormSaveGameBtn implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			String saveto = game.AskFor("Save to:");
+        	if (saveto != ""){
+        		game.SaveGame(saveto);
+        	}
+		}
+		
+	}
+	
+	class GameFormLoadGameBtn implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			String map = game.AskFor("Map file:");
+        	String state = game.AskFor("State file:");
+        	if ((map != "") && (state != "")){
+        		setVisible(false);
+        		game.LoadGame(map, state);
+        	}
+		}
+		
+	}
 
 	class GameFormKeyManager extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			if (e.getKeyCode() == KeyEvent.VK_UP) {
-				city_reference.GetRobber().setirany(0);
+				if (city_reference.GetRobber() != null)
+					city_reference.GetRobber().setirany(0);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-				city_reference.GetRobber().setirany(3);
+				if (city_reference.GetRobber() != null)
+					city_reference.GetRobber().setirany(3);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-				city_reference.GetRobber().setirany(1);
+				if (city_reference.GetRobber() != null)
+					city_reference.GetRobber().setirany(1);
 			}
 			if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-				city_reference.GetRobber().setirany(2);
+				if (city_reference.GetRobber() != null)
+					city_reference.GetRobber().setirany(2);
 			}
 		}
 	}
@@ -215,7 +264,9 @@ public class GameForm extends Frame implements View {
 
 		addWindowListener(new GameFormWindowCloser());
 		controlBtn.addKeyListener(new GameFormKeyManager());
-		// todo: menügombok eseményei
+		newGameBtn.addActionListener(new GameFormNewGameBtn());
+		loadGameBtn.addActionListener(new GameFormLoadGameBtn());
+		saveGameBtn.addActionListener(new GameFormSaveGameBtn());
 
 		// megjelenítés
 

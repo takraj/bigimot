@@ -7,6 +7,10 @@ public class game {
 	private static City city = null;
 	private static View view;
 	
+	public static City GetCity(){
+		return city;
+	}
+	
 	public static City LoadMap(String file){
 		int n;
 		String actLine;
@@ -20,7 +24,12 @@ public class game {
 		}
         
 		actLine=sc.nextLine();
-		n=Integer.parseInt(actLine);
+		try {
+			n=Integer.parseInt(actLine);
+		} catch (Exception e) {
+			PrintMessage("BAD FILE FORMAT!");
+			return null;
+		}
         
         String[] map=new String[n*n];
         
@@ -33,7 +42,7 @@ public class game {
 	}
 	
 	public static void LoadState(String file, City city){
-		if (city == null) return;
+		if (city == null) System.exit(-1);
 		
 		Scanner sc = null;
 		String actLine = "";
@@ -198,6 +207,7 @@ public class game {
 	public static void NewGame(String map){
 		city = null;
 		city = LoadMap(map);
+		if (city == null) System.exit(-1);
 		
 		if (view != null) view.dispose();
 		view = new GameForm("BIGIMOT, SZOFTVER LABOR 4", city);
@@ -256,26 +266,8 @@ public class game {
 	}
 	
 	public static void main(String args[])
-	{
-		/*
-		 * Gábor!
-		 * 
-		 * Ez a rész még itt ár lesz írva bõven.
-		 * Meg fog jelenni egy dialógusablak, 2 választási lehetõséggel:
-		 *   - New Game - Load Game -
-		 * 
-		 * Amit még tervezek: - Menni fognak természetesen a gombok a képernyõn.
-		 *                    - Lesz nyuszifeltûnés.
-		 *                    - Lesz egy 9x9-es térkép, amiben nincsenek zsákutcák.
-		 *                    - Lesz automatikus autó be-, és kiléptetés.
-		 * 
-		 * Ettõl függetlenül csináld meg a doksit arról ami eddig elkészült,
-		 * mert akkor csak a módosításokat kell majd beleírnod ami ~20 perc.
-		 * 
-		 * Üdv. TakRaj
-		 */
-		
-		LoadGame(AskFor("Map file:"),AskFor("State file:"));
+	{		
+		view = new MenuForm("BIGIMOT, SZOFTVER LABOR 4");
 	}
 
 }

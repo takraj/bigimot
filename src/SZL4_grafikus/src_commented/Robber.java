@@ -1,0 +1,157 @@
+/**
+ * Rabló osztály
+ * 
+ */
+public class Robber extends Car {
+
+	/**
+	 * konstruktor
+	 */
+	private int irany;
+	private int immortality;
+	
+	private int score = 0;
+	
+	public int GetScore(){
+		return score;
+	}
+	
+	public int GetHealth(){
+		return health;
+	}
+
+	public Robber() {
+		super();
+	}
+	public Robber(RoadBlock keeper) {
+		super(keeper);
+	}
+	public Robber(RoadBlock keeper, int s) {
+		super(keeper, s);
+	}
+	
+	public void setirany(int i){
+		if ((i<0)||(i>3)) {
+			irany=0;
+		} else {
+			if ((irany == i) && (speed > 1)) speed--;
+			if (speed <= 0) speed = 10;
+			irany=i;
+		}
+	}
+
+	/**
+	 * Ha rendõrt akart elõzni a játék vége
+	 */
+	public void pass(Police p) {
+		if (immortality==0) p.pass(this, 0);
+	}	
+	
+	public void pass(bunny b) {
+			immortal();
+	}
+	
+	/**
+	 * Ha civilt elõz a civil megsemmisül, õ tovább halad
+	 */
+	
+	public void pass(Car c) {
+		if (c.WhoAmI() == "Police"){
+			Police p = (Police)c;
+			if (immortality==0) p.pass(this, 0);
+			return;
+		}
+		if (c.WhoAmI() == "Bunny"){
+			immortal();
+			bunny b = (bunny)c;
+			b.destroy();
+			return;
+		}
+		if (c.WhoAmI() == "Car"){
+			c.destroy();
+			return;
+		}
+		c.rb.setCar(this);
+		rb.setCar(null);
+		rb=c.rb;
+	}
+
+
+	/**
+	 * Ha civil akarja elõzni
+	 */
+	public void move(Car c) {
+		if (c.WhoAmI() == "Police"){
+			Police p = (Police)c;
+			p.pass(this, immortality);
+		} else {
+			c.pass(this);
+		}
+	}
+	/**
+	 * Ha rendõr elkapja
+	 */
+	public void move(Police p) {
+		p.pass(this,immortality);
+	}
+	/**
+	 * A haladásért felelõs függvény a Car.step() felüldefiniálása
+	 */
+	public void step()
+	{
+		
+		if (rb.getBuilding() != null){
+			if (rb.getBuilding().WhoAmI() == "Bank"){
+				if (score <= 0) score = irand.nextInt(99);
+			}
+		}
+		
+		time--;
+		if (time==0)
+		{
+			time=speed;
+			RoadBlock destination;
+			RoadBlock[] destlist=rb.getNeighbour(); 
+			destination=destlist[irany];
+			if (destination==null)
+			{
+				destlist=rb.getPrev();
+				destination=destlist[irany];
+				if (destination==null) return;
+			}
+			// 	elkéri a lehetséges célállomások címét a RoadBlocktól, és a destinationban tárolja 
+	
+			Car elozendo = destination.getCar(); //megtudja milyen autó van (ha van) a cél RoadBlockon
+			if (elozendo==null) //ha nincs autó halad tovább
+				{
+					rb.setCar(null);
+					destination.setCar(this);
+					rb=destination;
+				}
+			else
+				{
+					if (elozendo != null)
+						elozendo.move(this);
+				}
+		
+		
+			Building tempb=destination.getBuilding();
+			if (tempb!=null) tempb.getRole(this);
+		}
+	}
+		
+	public void AtBuilding(Hideout h)
+	{
+		game.PrintMessage("Nyertél - Game Over");
+		System.exit(0);
+	}
+	public void immortal() {
+		health+=12;
+		immortality=10;
+	}
+	
+	@Override
+	public String WhoAmI(){
+		return "Robber";
+	}
+}

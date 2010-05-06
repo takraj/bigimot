@@ -32,6 +32,7 @@ public class Robber extends Car {
 			irany=0;
 		} else {
 			if ((irany == i) && (speed > 1)) speed--;
+			if (speed <= 0) speed = 10;
 			irany=i;
 		}
 	}
@@ -40,8 +41,9 @@ public class Robber extends Car {
 	 * Ha rendõrt akart elõzni a játék vége
 	 */
 	public void pass(Police p) {
-		if (immortality==0) return;
+		if (immortality==0) p.pass(this, 0);
 	}	
+	
 	public void pass(bunny b) {
 			immortal();
 	}
@@ -51,10 +53,24 @@ public class Robber extends Car {
 	 */
 	
 	public void pass(Car c) {
+		if (c.WhoAmI() == "Police"){
+			Police p = (Police)c;
+			if (immortality==0) p.pass(this, 0);
+			return;
+		}
+		if (c.WhoAmI() == "Bunny"){
+			immortal();
+			bunny b = (bunny)c;
+			b.destroy();
+			return;
+		}
+		if (c.WhoAmI() == "Car"){
+			c.destroy();
+			return;
+		}
 		c.rb.setCar(this);
 		rb.setCar(null);
 		rb=c.rb;
-		//c.destroy();
 	}
 
 
@@ -62,7 +78,12 @@ public class Robber extends Car {
 	 * Ha civil akarja elõzni
 	 */
 	public void move(Car c) {
-		c.pass(this);
+		if (c.WhoAmI() == "Police"){
+			Police p = (Police)c;
+			p.pass(this, immortality);
+		} else {
+			c.pass(this);
+		}
 	}
 	/**
 	 * Ha rendõr elkapja
@@ -75,6 +96,13 @@ public class Robber extends Car {
 	 */
 	public void step()
 	{
+		
+		if (rb.getBuilding() != null){
+			if (rb.getBuilding().WhoAmI() == "Bank"){
+				if (score <= 0) score = irand.nextInt(99);
+			}
+		}
+		
 		time--;
 		if (time==0)
 		{
@@ -99,7 +127,8 @@ public class Robber extends Car {
 				}
 			else
 				{
-					elozendo.move(this);
+					if (elozendo != null)
+						elozendo.move(this);
 				}
 		
 		
@@ -113,7 +142,10 @@ public class Robber extends Car {
 		game.PrintMessage("Nyertél - Game Over");
 		System.exit(0);
 	}
-	public void immortal() {immortality=10;}
+	public void immortal() {
+		health+=12;
+		immortality=10;
+	}
 	
 	@Override
 	public String WhoAmI(){
