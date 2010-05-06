@@ -2,9 +2,13 @@
 public class bunny extends Car {
 	public bunny() {
 		super();
+		speed = 0;
+		timetomove = 0;
 	}
 	public bunny(RoadBlock keeper) {
 		super(keeper);
+		speed = 0;
+		timetomove = 0;
 	}
 	public bunny(RoadBlock keeper, int s) {
 		super(keeper, s);
@@ -33,6 +37,7 @@ public class bunny extends Car {
 
 	public void step()
 	{
+		if (speed < 1) return;
 		time--;
 		if (time==0)
 		{

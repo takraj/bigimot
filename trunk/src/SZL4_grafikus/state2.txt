@@ -1,11 +1,11 @@
 OBJECT car[0] TYPE Robber
-speed 10
-timetomove 5
+speed 1
+timetomove 1
 health 5
 OBJECT car[1] TYPE Police
 speed 3
 timetomove 5
-OBJECT road[3] TYPE RoadBlock
+OBJECT road[4] TYPE RoadBlock
 car car[0]
-OBJECT road[2] TYPE RoadBlock
+OBJECT road[3] TYPE RoadBlock
 car car[1]

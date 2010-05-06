@@ -1,12 +1,24 @@
+import java.util.Random;
+
 
 public class City {
+	
+	private boolean robber_once = true;
 	
 	public Car[] car;
 	private ITraffic[] traffic;
 	
+	Random irand = new Random();
+	
 	private RoadBlock[] road;
 	Building h;
 	int rsize, tsize, bsize, csize;
+	
+	public void DeleteCar(Car c){
+		for (int i = 0; i<csize; i++){
+			if (car[i] == c) car[i] = null;
+		}
+	}
 	
 	public int GetSize(){
 		return rsize;
@@ -36,6 +48,128 @@ public class City {
 		return null;
 	}
 	
+	public RoadBlock FirstIn(){
+		for (int i=0; i<GetSize(); i++){
+			if (road[i] != null){
+				if ((road[i].GetNeighbour(0) != null) || (road[i].GetNeighbour(1) != null) || (road[i].GetNeighbour(2) != null) || (road[i].GetNeighbour(3) != null)) {
+					return road[i];
+				}
+			}
+		}
+		return null;
+	}
+	
+	public RoadBlock LastIn(){
+		for (int i=(GetSize()-1); i>=0; i--){
+			if (road[i] != null){
+				if ((road[i].GetNeighbour(0) != null) || (road[i].GetNeighbour(1) != null) || (road[i].GetNeighbour(2) != null) || (road[i].GetNeighbour(3) != null)) {
+					return road[i];
+				}
+			}
+		}
+		return null;
+	}
+	
+	public int CountOfNotNull(Object[] o){
+		int count = 0;
+		
+		for (int i = 0; i<o.length; i++){
+			if (o[i] != null) count++;
+		}
+		
+		return count;
+	}
+	
+	public void GenerateCar(){
+		RoadBlock where = null;
+
+		if ((irand.nextBoolean()) && (FirstIn() != null)){
+			where = FirstIn();
+		} else if (LastIn() != null){
+			where = LastIn();
+		} else if (FirstIn() != null){
+			where = FirstIn();
+		} else {
+			return;		// üres pálya
+		}
+		
+		if ((where != null) && (where.getCar() == null)){
+			if (irand.nextInt(5) == 0){
+				// generate police
+				
+				int index = FirstEmpty(car);
+				car[index] = new Police(where);
+				if (car.length > csize) csize = car.length;
+			}
+			else {
+				// generate civilian
+				
+				int index = FirstEmpty(car);
+				car[index] = new Car(where);
+				if (car.length > csize) csize = car.length;
+			}
+		}
+	}
+	
+	public boolean IsFull(Object[] o){
+		if (o != null){
+			for (int i = 0; i<o.length; i++){
+				if (o[i] == null) return false;
+			}
+		}
+		return true;
+	}
+	
+	public int FirstEmpty(Object[] o){
+		if (o != null){
+			for (int i = 0; i<o.length; i++){
+				if (o[i] == null) return i;
+			}
+		}
+		
+		return -1;
+	}
+	
+	public boolean IsThereBunny(){
+		for (int i=0; i<csize; i++){
+			if ((car[i] != null) && (car[i].WhoAmI() == "Bunny"))
+				return true;
+		}
+		return false;
+	}
+	
+	public void PlaceBunny(){
+		int[] perm = Randomizer.CreatePermutation(GetSize());
+		if ((perm != null) && (!IsFull(car))){
+			for (int i = 0; i<perm.length; i++){
+				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
+					int robber_index = FirstEmpty(car);
+					car[robber_index] = new bunny();
+					if (car.length > csize) csize = car.length;
+					road[perm[i]].setCar(car[robber_index]);
+					car[robber_index].SetRB(road[perm[i]]);
+					return;
+				}
+			}
+		}
+	}
+	
+	public void PlaceRobber(){
+		int[] perm = Randomizer.CreatePermutation(GetSize());
+		if ((perm != null) && (!IsFull(car))){
+			for (int i = 0; i<perm.length; i++){
+				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
+					int bunny_index = FirstEmpty(car);
+					car[bunny_index] = new Robber();
+					if (car.length > csize) csize = car.length;
+					road[perm[i]].setCar(car[bunny_index]);
+					car[bunny_index].SetRB(road[perm[i]]);
+					return;
+				}
+			}
+		}
+	}
+	
 	/**
 	 * City konstruktora, ez hozza létre a RoadBlockokat, hideoutot, és a Car-okat
 	 * n: oszlopok/sorok száma
@@ -43,11 +177,11 @@ public class City {
 	public City(String[] map, int n){
 		road=new RoadBlock[n*n];
 		for(int i=0;i<n*n;i++) road[i]=new RoadBlock();
-		traffic=new ITraffic[10];
+		traffic=new ITraffic[n*n];
 		rsize=n*n;
 		tsize=bsize=0;
 		csize=0;
-		car=new Car[20];
+		car=new Car[n*n];
 		char c;
 		
 		for(int i=0;i<n*n;i++){
@@ -111,7 +245,7 @@ public class City {
 	public void addCar(String t, int index){
 		if (csize < (index+1)) csize = index+1;
 		
-		if(t.compareTo("Robber")==0) car[index]=new Robber();
+		if(t.compareTo("Robber")==0) {car[index]=new Robber(); robber_once = false; }
 		if(t.compareTo("Police")==0) car[index]=new Police();
 		if(t.compareTo("Car")==0) car[index]=new Car();
 		if(t.compareTo("Bunny")==0) car[index]=new bunny();
@@ -141,6 +275,27 @@ public class City {
 	}
 	
 	public void step() {
+		
+		// rabló elhelyezése, ha még nem volt, véletlenszerû helyre
+		
+		if ((GetRobber() == null) && (robber_once)){
+			robber_once = false;
+			PlaceRobber();
+		}
+		
+		// nyuszi elhelyezése véletlenszerû idõben véletlen helyre
+		
+		if ((!IsThereBunny()) && (irand.nextBoolean())){
+			PlaceBunny();
+		}
+		
+		// autók generálása
+		
+		if (CountOfNotNull(car) < Math.floor(Math.sqrt(rsize))){
+			GenerateCar();
+		}
+		
+		// léptetés
 		
 		for(int i=0;i<csize;i++){
 			if ((car[i] != null) && (car[i].getKeeper() != null))

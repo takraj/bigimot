@@ -1,5 +1,3 @@
-import java.io.BufferedWriter;
-import java.io.IOException;
 
 public class Police extends Car {
 
@@ -17,23 +15,17 @@ public class Police extends Car {
 		super(keeper, s);
 	}
 	
-	public void save(BufferedWriter out){
-		try {
-			out.write(" police speed="+speed);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
 	/**
 	 * Mikor a rablót elkapja a rendõr akkor hívódik meg, a játék elvesztéséhez
 	 * vezet.
 	 * @param r Referencia a rablóra  
 	 */
 	public void pass(Robber r, int i) {
-		if (i==0) return;
+		if (i==0) {
+			game.PrintMessage("Elkapott a rendõr.");
+			r.destroy();
 		}
+	}
 	/**
 	 * Mikor egy civil gyorsabb mint a rendõr (megelõzni nem tudja) akkor hívódik meg
 	 * @param c Az adott civil jármûre mutató referencia
@@ -57,6 +49,12 @@ public class Police extends Car {
 
 	public void step()
 	{
+		
+		if ((rb.GetNeighbour(0) == null) && (rb.GetNeighbour(1) == null) && (rb.GetNeighbour(2) == null) && (rb.GetNeighbour(3) == null)){
+			destroy();
+			return;
+		}
+		
 		time--;
 		if (time==0)
 		{
@@ -90,7 +88,9 @@ public class Police extends Car {
 					}
 				else
 					{
-						elozendo.move(this);
+						if (elozendo != null){
+							elozendo.move(this);
+						}
 					}
 			
 		

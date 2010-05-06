@@ -7,7 +7,7 @@ public class Car {
 	private int my_index = 0;
 	
 	protected int time;
-	protected int speed;
+	protected int speed = 10;
 	protected int timetomove;
 	protected int health;
 	protected RoadBlock rb;
@@ -69,6 +69,11 @@ public class Car {
 	public void step()
 	{
 		
+		if ((rb.GetNeighbour(0) == null) && (rb.GetNeighbour(1) == null) && (rb.GetNeighbour(2) == null) && (rb.GetNeighbour(3) == null)){
+			destroy();
+			return;
+		}
+		
 		time--;
 		if (time==0)
 		{
@@ -101,7 +106,9 @@ public class Car {
 					}
 				else
 					{
+					if (elozendo != null){
 						elozendo.move(this);
+					}
 					}
 			
 		
@@ -137,6 +144,7 @@ public class Car {
 	public void destroy() {
 		rb.setCar(null);
 		this.rb=null;
+		game.GetCity().DeleteCar(this);
 	}
 	
 	public void SetView(ElementView v){

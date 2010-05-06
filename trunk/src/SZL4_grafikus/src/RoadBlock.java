@@ -10,11 +10,17 @@ public class RoadBlock {
 	//private int traf;
 	public int used;
 	
+	public boolean IsNotZombie(){
+		if (((road[0] != null) || (road[1] != null) || (road[2] != null) || (road[3] != null))
+				|| ((prev[0] != null) || (prev[1] != null) || (prev[2] != null) || (prev[3] != null)))
+			return true;
+		else return false;
+	}
+	
 	public void SetView(ElementView v){
 		// ha zombi, akkor ne legyen neki megjelenítése
 		
-		if (((road[0] != null) || (road[1] != null) || (road[2] != null) || (road[3] != null))
-				|| ((prev[0] != null) || (prev[1] != null) || (prev[2] != null) || (prev[3] != null)))
+		if (IsNotZombie())
 			view = v;
 	}
 	
