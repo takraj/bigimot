@@ -1,5 +1,10 @@
 import java.util.Random;
 
+/**
+ * A várost reprezentáló osztály.
+ * 
+ * @author TakRaj
+ */
 
 public class City {
 	
@@ -14,31 +19,76 @@ public class City {
 	Building h;
 	int rsize, tsize, bsize, csize;
 	
+	/**
+	 * Töröl egy autót.
+	 * 
+	 * @param c Melyik autót?
+	 */
+	
 	public void DeleteCar(Car c){
 		for (int i = 0; i<csize; i++){
 			if (car[i] == c) car[i] = null;
 		}
 	}
 	
+	/**
+	 * Visszaadja a város méretét. Négyzetszám.
+	 * 
+	 * @return A város mérete négyzetszámmal.
+	 */
+	
 	public int GetSize(){
 		return rsize;
 	}
+	
+	/**
+	 * Visszaadja az i-edik indexen lévõ RoadBlock referenciáját.
+	 * 
+	 * @param i RoadBlock indexe.
+	 * @return RoadBlock referencia.
+	 */
 	
 	public RoadBlock GetRBAt(int i){
 		return road[i];
 	}
 	
+	/**
+	 * Visszaadja az i-edik indexen lévõ Autót.
+	 * 
+	 * @param i Car indexe.
+	 * @return Autó referenciája.
+	 */
+	
 	public Car GetCar(int i){
 		return car[i];
 	}
+	
+	/**
+	 * Visszaadja az i-edik indexen lévõ ITraffic-ot.
+	 * 
+	 * @param i ITraffic indexe.
+	 * @return ITraffic referenciája.
+	 */
 	
 	public ITraffic GetTraffic(int i){
 		return traffic[i];
 	}
 	
+	/**
+	 * Visszaadja a rejtekhely referenciáját.
+	 * 
+	 * @return Rejtekhely referenciája.
+	 */
+	
 	public Building GetHideout(){
 		return h;
 	}
+	
+	/**
+	 * Visszaadja a rabló referenciáját.
+	 * 
+	 * @return Rabló referenciája.
+	 */
 	
 	public Robber GetRobber(){
 		for (int i=0; i<csize; i++){
@@ -47,6 +97,12 @@ public class City {
 		}
 		return null;
 	}
+	
+	/**
+	 * Visszaadja a RoadBlockok közül az elsõ olyat, aminek van kijárata.
+	 * 
+	 * @return Elsõ nyitó RoadBlock.
+	 */
 	
 	public RoadBlock FirstIn(){
 		for (int i=0; i<GetSize(); i++){
@@ -59,6 +115,12 @@ public class City {
 		return null;
 	}
 	
+	/**
+	 * Visszaadja a RoadBlockok közül az utolsó olyat, aminek van kijárata.
+	 * 
+	 * @return Utolsó nyitó RoadBlock.
+	 */
+	
 	public RoadBlock LastIn(){
 		for (int i=(GetSize()-1); i>=0; i--){
 			if (road[i] != null){
@@ -70,6 +132,13 @@ public class City {
 		return null;
 	}
 	
+	/**
+	 * Megadja egy tömbben a nem NULL elemek számát.
+	 * 
+	 * @param o Tetszõleges tömb.
+	 * @return Nem NULL elemek száma.
+	 */
+	
 	public int CountOfNotNull(Object[] o){
 		int count = 0;
 		
@@ -79,6 +148,10 @@ public class City {
 		
 		return count;
 	}
+	
+	/**
+	 * Autót generál az elsõ vagy utolsó nyitó RoadBlock-ra.
+	 */
 	
 	public void GenerateCar(){
 		RoadBlock where = null;
@@ -99,17 +172,26 @@ public class City {
 				
 				int index = FirstEmpty(car);
 				car[index] = new Police(where);
-				if (car.length > csize) csize = car.length;
+				car[index].setIndex(index);
+				if ((index+1) > csize) csize = (index+1);
 			}
 			else {
 				// generate civilian
 				
 				int index = FirstEmpty(car);
 				car[index] = new Car(where);
-				if (car.length > csize) csize = car.length;
+				car[index].setIndex(index);
+				if ((index+1) > csize) csize = (index+1);
 			}
 		}
 	}
+	
+	/**
+	 * Megadja, hogy egy fix hosszú tömb tele van-e.
+	 * 
+	 * @param o Tetszõleges tömb.
+	 * @return true, ha nincs benne NULL elem, false egyébént.
+	 */
 	
 	public boolean IsFull(Object[] o){
 		if (o != null){
@@ -119,6 +201,13 @@ public class City {
 		}
 		return true;
 	}
+	
+	/**
+	 * Megadja az o tömb elsõ olyan indexét, ami NULL.
+	 * 
+	 * @param o Tetszõleges tömb.
+	 * @return Index, ha van, -1 egyébként.
+	 */
 	
 	public int FirstEmpty(Object[] o){
 		if (o != null){
@@ -130,6 +219,12 @@ public class City {
 		return -1;
 	}
 	
+	/**
+	 * Megadja, hogy van-e már nyuszi a pályán.
+	 * 
+	 * @return true, ha van, false egyébként.
+	 */
+	
 	public boolean IsThereBunny(){
 		for (int i=0; i<csize; i++){
 			if ((car[i] != null) && (car[i].WhoAmI() == "Bunny"))
@@ -138,32 +233,42 @@ public class City {
 		return false;
 	}
 	
+	/**
+	 * Véletlenszerû helyre pakol egy nyulat a pályán.
+	 */
+	
 	public void PlaceBunny(){
 		int[] perm = Randomizer.CreatePermutation(GetSize());
 		if ((perm != null) && (!IsFull(car))){
 			for (int i = 0; i<perm.length; i++){
 				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
-					int robber_index = FirstEmpty(car);
-					car[robber_index] = new bunny();
-					if (car.length > csize) csize = car.length;
-					road[perm[i]].setCar(car[robber_index]);
-					car[robber_index].SetRB(road[perm[i]]);
+					int index = FirstEmpty(car);
+					car[index] = new bunny();
+					car[index].setIndex(index);
+					if ((index+1) > csize) csize = (index+1);
+					road[perm[i]].setCar(car[index]);
+					car[index].SetRB(road[perm[i]]);
 					return;
 				}
 			}
 		}
 	}
 	
+	/**
+	 * Véletlenszerû helyre pakol egy rablót a pályán.
+	 */
+	
 	public void PlaceRobber(){
 		int[] perm = Randomizer.CreatePermutation(GetSize());
 		if ((perm != null) && (!IsFull(car))){
 			for (int i = 0; i<perm.length; i++){
 				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
-					int bunny_index = FirstEmpty(car);
-					car[bunny_index] = new Robber();
-					if (car.length > csize) csize = car.length;
-					road[perm[i]].setCar(car[bunny_index]);
-					car[bunny_index].SetRB(road[perm[i]]);
+					int index = FirstEmpty(car);
+					car[index] = new Robber();
+					car[index].setIndex(index);
+					if ((index+1) > csize) csize = (index+1);
+					road[perm[i]].setCar(car[index]);
+					car[index].SetRB(road[perm[i]]);
 					return;
 				}
 			}
@@ -172,7 +277,9 @@ public class City {
 	
 	/**
 	 * City konstruktora, ez hozza létre a RoadBlockokat, hideoutot, és a Car-okat
-	 * n: oszlopok/sorok száma
+	 * 
+	 * @param map Pályát reprezentáló string.
+	 * @param n Pálya mérete, négyzetszámban.
 	 */
 	public City(String[] map, int n){
 		road=new RoadBlock[n*n];
@@ -215,7 +322,7 @@ public class City {
 				case '1':
 					road[i].used=1;
 					// fel=0, bal=2, jobb=1, le=3
-					if(j==i-3){
+					if(j==i-n){
 						road[i].setNeighbour(road[j], 0);
 						road[j].setPrev(road[i], 3);
 					}
@@ -227,7 +334,7 @@ public class City {
 						road[i].setNeighbour(road[j], 2);
 						road[j].setPrev(road[i], 1);
 					}
-					if(j==i+3){
+					if(j==i+n){
 						road[i].setNeighbour(road[j], 3);
 						road[j].setPrev(road[i], 0);
 					}
@@ -238,9 +345,14 @@ public class City {
 				}
 			} 
 		}
-		
-		
 	}
+	
+	/**
+	 * Egy azonosítóstringével megadott autót pakol a pálya indexedik RoadBlock-jára.
+	 * 
+	 * @param t Azonosító string: "Robber", "Police", "Car", "Bunny"
+	 * @param index RoadBlock indexe.
+	 */
 	
 	public void addCar(String t, int index){
 		if (csize < (index+1)) csize = index+1;
@@ -255,6 +367,14 @@ public class City {
 		}
 	}
 	
+	/**
+	 * Egy azonosító stringbõl autót hoz létre, a pálya i-edik RoadBlock-ján, s sebességgel.
+	 * 
+	 * @param t Azonosító string: "Robber", "Police", "Car", "Bunny"
+	 * @param i RoadBlock indexe.
+	 * @param s Autó sebessége.
+	 */
+	
 	public void setCar(String t, int i, int s){
 		if(t.compareTo("Robber")==0) car[csize]=new Robber(road[i],s);
 		if(t.compareTo("Police")==0) car[csize]=new Police(road[i],s);
@@ -266,18 +386,26 @@ public class City {
 	}
 	
 	/**
-	 * Léptetõ függvény, ez biztosítja az órajelet
-	 *  
+	 * A rabló irányát állítja be.
+	 * 
+	 * @param i Lásd: Car.setirany()
 	 */
 
 	public void robDir(int i){
 		car[0].setirany(i);
 	}
 	
+	/**
+	 * Léptetõ függvény, ez biztosítja az órajelet
+	 *  
+	 */
+	
 	public void step() {
 		
-		// rabló elhelyezése, ha még nem volt, véletlenszerû helyre
-		
+		/*
+		 *  rabló elhelyezése, ha még nem volt, véletlenszerû helyre
+		 * 
+		 */
 		if ((GetRobber() == null) && (robber_once)){
 			robber_once = false;
 			PlaceRobber();

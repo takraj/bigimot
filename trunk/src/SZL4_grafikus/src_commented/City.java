@@ -172,14 +172,16 @@ public class City {
 				
 				int index = FirstEmpty(car);
 				car[index] = new Police(where);
-				if (car.length > csize) csize = car.length;
+				car[index].setIndex(index);
+				if ((index+1) > csize) csize = (index+1);
 			}
 			else {
 				// generate civilian
 				
 				int index = FirstEmpty(car);
 				car[index] = new Car(where);
-				if (car.length > csize) csize = car.length;
+				car[index].setIndex(index);
+				if ((index+1) > csize) csize = (index+1);
 			}
 		}
 	}
@@ -240,11 +242,12 @@ public class City {
 		if ((perm != null) && (!IsFull(car))){
 			for (int i = 0; i<perm.length; i++){
 				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
-					int robber_index = FirstEmpty(car);
-					car[robber_index] = new bunny();
-					if (car.length > csize) csize = car.length;
-					road[perm[i]].setCar(car[robber_index]);
-					car[robber_index].SetRB(road[perm[i]]);
+					int index = FirstEmpty(car);
+					car[index] = new bunny();
+					car[index].setIndex(index);
+					if ((index+1) > csize) csize = (index+1);
+					road[perm[i]].setCar(car[index]);
+					car[index].SetRB(road[perm[i]]);
 					return;
 				}
 			}
@@ -260,11 +263,12 @@ public class City {
 		if ((perm != null) && (!IsFull(car))){
 			for (int i = 0; i<perm.length; i++){
 				if ((road[perm[i]] != null) && (road[perm[i]].getCar() == null) && (road[perm[i]].IsNotZombie())){
-					int bunny_index = FirstEmpty(car);
-					car[bunny_index] = new Robber();
-					if (car.length > csize) csize = car.length;
-					road[perm[i]].setCar(car[bunny_index]);
-					car[bunny_index].SetRB(road[perm[i]]);
+					int index = FirstEmpty(car);
+					car[index] = new Robber();
+					car[index].setIndex(index);
+					if ((index+1) > csize) csize = (index+1);
+					road[perm[i]].setCar(car[index]);
+					car[index].SetRB(road[perm[i]]);
 					return;
 				}
 			}
@@ -318,7 +322,7 @@ public class City {
 				case '1':
 					road[i].used=1;
 					// fel=0, bal=2, jobb=1, le=3
-					if(j==i-3){
+					if(j==i-n){
 						road[i].setNeighbour(road[j], 0);
 						road[j].setPrev(road[i], 3);
 					}
@@ -330,7 +334,7 @@ public class City {
 						road[i].setNeighbour(road[j], 2);
 						road[j].setPrev(road[i], 1);
 					}
-					if(j==i+3){
+					if(j==i+n){
 						road[i].setNeighbour(road[j], 3);
 						road[j].setPrev(road[i], 0);
 					}
