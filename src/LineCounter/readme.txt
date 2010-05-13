@@ -1,0 +1,1 @@
+JDK PATH MUST BE SET CORRECTLY IN compile.bat
