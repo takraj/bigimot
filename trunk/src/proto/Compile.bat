@@ -1,0 +1,1 @@
+D:\Progra~1\Java\jdk1.6.0_17\bin\javac D:\src\*.java

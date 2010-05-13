@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk1.6.0_19\bin\java.exe" -jar LineCounter.jar
